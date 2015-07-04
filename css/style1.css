@@ -3,11 +3,10 @@
 
 /* General Demo Style */
 
-* { margin: 0; padding: 0; border: 0; } 
+* { margin: 0; padding: 0; border: 0; overflow: scroll; } 
 
 body {
 	background: url(../images/logo_T.J._lgred.png) 300px 50px fixed no-repeat #ffffff;
-	overflow: scroll;
 	background-size: 90%;
 	font-family: 'Oswald', serif;
 }
@@ -22,6 +21,7 @@ a{
 .header{
 	font-family:'Oswald', Arial, sans-serif;
 	color: white;
+	overflow: visible;
 	font-weight: 100;
 	line-height: 28px;
 	font-size: 14px;
@@ -138,37 +138,10 @@ padding-left: 5px;
 /* container style */
 
 .container{
+	display: block;
 	width: 100%;
 	position: fixed;
-	overflow: scroll;
 	vertical-align: top;
-}
-
-.sp-container {
-	position: relative;
-	width: 100%;
-	height: 1000px;
-	margin: 0 auto 0 auto;
-	text-align: center;
-}
-
-.sp-container p {
-	font-size: 24px;
-	font-weight: 200;
-	color: #000;
-	text-align: center;
-	text-shadow: 0px 1px 1px #333333;
-}
-
-.sp-content {
-	position: absolute;
-	z-index: 100;
-	width: 100%;
-	height: 1800px;
-	left: 0px;
-	right: 0px;
-	top: 20px;
-
 }
 
 p.demos{
@@ -206,33 +179,46 @@ p.demos a.current-demo:hover{
 }
 
 .sp-container {
+	display: inline-block;
 	position: relative;
 	width: 100%;
-	height: 1000px;
+	height: 41em;
 	margin: 0 auto 0 auto;
+	text-align: center;
 }
+
+.sp-container p {
+	font-size: 24px;
+	font-weight: 200;
+	color: #000;
+	text-align: center;
+	text-shadow: 0px 1px 1px #333333;
+}
+
 .sp-content {
-	position: absolute;
+	position: relative;
+	display: inline-block;
 	overflow: scroll;
 	z-index: 100;
 	width: 100%;
-	height: 900px;
 	left: 0px;
 	right: 0px;
 	top: 50px;
 	bottom: 100px;
 }
 
+
+
 .sp-holding {
 	background-color: black;
-	position: absolute;
+	position: relative;
 	z-index: 100;
 	width: 100%;
 	padding-top: 100px;
-	height: 1000px;
+	display: inline-block;
 	left: 0px;
 	right: 0px;
-	top: 700px;
+	top: 50px;
 }
 
 .sp-holding p {color: white;
@@ -242,24 +228,22 @@ p.demos a.current-demo:hover{
 	background-image: url(../images/Untitled-3.png);
 	background-repeat: repeat; 
 	background-color: white;
-	position: absolute;
+	position: relative;
 	z-index: 100;
 	width: 100%;
-	height: 1000px;
-	overflow: scroll;
-	top: 1800px;
+	display: inline-block;
+	top: 50px;
 	left: 0px;
 	right: 0px;
+	bottom: 50px;
 }
 
 .box {
 	margin-top: 50px;
 	margin-right: 5%;
 	margin-left: 5%;
-	margin-bottom: 50px;
 	width: 90%;
-	min-height: 1100px;
-	overflow: scroll;
+	display: inline-block;
 	background-image: url(../images/bg_transparent_wht.png);
 	background-repeat: repeat-fixed;
 }
@@ -345,8 +329,6 @@ p.demos a.current-demo:hover{
 	-ms-animation: fromBack 3.2s;
 	animation: fromBack 3.2s;
 }
-
-
 
 
 /* -webkit- */
