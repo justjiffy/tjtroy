@@ -1,0 +1,121 @@
+body {
+	padding-top: 8%;
+	background-image: url('images/bg.jpg');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-color: black;
+}
+
+a, a:active, a:visited {
+	color: black;
+}
+
+a:hover {
+	color: #606060;
+}
+
+.bordered {
+	border-radius: 10px;
+	border: 10px solid black;
+}
+audio {
+	width: 75%;
+	padding-bottom: 10px;
+}
+.semi-transp {
+	background-color: rgba(255,255,255,0.75);
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.fullVh {
+	min-height: 100vh;
+	width: 100%;
+}
+
+h2 span { 
+  margin-top: -125px;        /* Size of fixed header */
+  padding-bottom: 125px; 
+  display: block; 
+}
+
+h1 {
+  color: white;
+  font-size: 5.65vw;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+	font-size: 26px;
+	line-height: 36px;
+	vertical-align: top;
+}
+
+p {
+  font-size: 2vmin;
+}
+
+.reels,
+.contact,
+.about {
+	margin-bottom: 150px;
+	text-align: center;
+}
+
+.reel {
+	margin: 10px 10px;
+	background-color: rgba(255,255,255, 0.5);
+	border-radius: 10px;
+	border: 10px solid black;
+	overflow: hidden;
+}
+.left {
+	float: left;
+	margin-left: 10px;
+}
+
+.right {
+	float: right;
+}
+
+.col-centered{
+    margin: 0 auto;
+}
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+.clicked {
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+.about_text {
+	display: none;
+	font-size: 18px;
+}
+
+footer {
+	position: static;
+	bottom:0;
+	width: 100%;
+	text-align: center;
+	background-color: black;
+	color: white;
+}
