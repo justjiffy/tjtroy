@@ -13,6 +13,7 @@ body {
 	background-size: 90%;
 	font-family: 'Oswald', serif;
 	height: 100%;
+	overflow-x: hidden;
 }
 
 .other {
@@ -41,11 +42,16 @@ h1.bold {
 	font-weight: 700;
 }
 
-iframe {
-	margin: 10px;
-	width: 50%;
-	height: 800px;
+.iframe-homepage {
 	padding-top: 20px;
+	width: 45%;
+	height: 315px;
+}
+
+.iframe-rdh {
+	padding-top: 20px;
+	width: 100%;
+	height: 100vh;
 }
 
 /* Header Style */
@@ -87,6 +93,7 @@ iframe {
 
 .header h1 {
 	float: left;
+	font-size: 24px;
 }
 
 ul#navlist { 
@@ -175,8 +182,8 @@ padding-left: 5px;
 	display: inline-block;
 	width: 100%;
 	overflow: scroll;
-	position: absolute;
 	vertical-align: top;
+	overflow-x: hidden;
 }
 
 p.demos{
@@ -218,12 +225,12 @@ p.demos a.current-demo:hover{
 	position: relative;
 	width: 100%;
 	height: 100%;
-	overflow: scroll;
 	margin: 0 auto 0 auto;
 	text-align: center;
+	padding-bottom: 25px
 }
 
-.sp-container p {
+.glow-text {
 	font-size: 24px;
 	font-weight: 200;
 	color: #000;
@@ -261,14 +268,12 @@ p.demos a.current-demo:hover{
 	bottom: 100px;
 }
 
-
-
 .sp-holding {
 	background-color: black;
 	position: relative;
 	z-index: 100;
 	width: 100%;
-	padding-top: 100px;
+	padding: 25px 0 75px 0;
 	display: inline-block;
 	left: 0px;
 	right: 0px;
@@ -286,56 +291,53 @@ p.demos a.current-demo:hover{
 	position: relative;
 	z-index: 100;
 	width: 100%;
-	display: inline-block;
-	top: 50px;
-	left: 0px;
-	right: 0px;
-	bottom: 50px;
+	display: block;
 }
 
 .sp-morecontent a {
-	font-weight: 400;
-	color: black;
-	float: right;
-	margin-right: 10px;
-}
-.sp-morecontent a:hover {
-	color: #999999;
+	font-size: 24px;
+	color: #fff;
+	font-weight: 700;
+	text-shadow: 5px 5px 15px #757575;
+	font-family: 'Oswald', Arial, sans-serif;
+	text-transform: uppercase;
 }
 
 .sp-morecontent a:visited {
-	color: black;
+	color: white;
 }
 
+.bubble {
+	width:175px;
+	height: 125px;
+	border-radius: 50%;
+	background-color: black;
+	padding-top: 50px;
+	margin: 10px 0 auto;
+	display: inline-table;
+}
+
+.bubble:hover {
+	background-color: #999999;
+}
 
 .box {
-	margin-top: 50px;
-	margin-right: 5%;
-	margin-left: 5%;
-	padding: 10px;
+	margin: 50px 5% 0 5%;
+	padding: 10px 0 0 0;
 	width: 90%;
 	display: inline-block;
-	background-image: url(../images/bg_transparent_wht.png);
-	background-repeat: repeat-fixed;
-}
-
-.box_bk {
-	margin-top: 50px;
-	margin-right: 5%;
-	margin-left: 5%;
-	width: 100%;
-	display: inline-block;
-	background: black;
+	background-color: rgba(255, 255, 255, 0.75);
 	text-align: center;
 }
+
 .box h1 {
-	font-family: 'Oswald', Arial black, sans-serif;
-	text-align: left;
-	margin-left: 10px;
-	color: black;
-	font-size: 24px;
+	font-size: 50px;
+	color: #000;
 	font-weight: 700;
-	text-shadow: 2px 2px 2px #ffffff;
+	text-shadow: 5px 5px 15px #757575;
+	padding: 30px 0px 20px 0px;
+	font-family: 'Oswald', Arial, sans-serif;
+	text-transform: uppercase;
 }
 
 .box p {
@@ -350,18 +352,6 @@ p.demos a.current-demo:hover{
 	margin-left: 25C.V.px;
 	margin-bottom: 40px; 
 	text-shadow: 1px 1px 1px #ffffff;
-}
-
-.footer {
-	font-family:'Yantramanav', Arial, sans-serif;
-	font-weight: 700;
-	letter-spacing: 0px;
-	line-height: 28px;
-	font-size: 16px;
-	text-align: center;
-	margin-top: 10px;
-	text-shadow: 1px 1px 1px #ffffff;
-	background-color: black;
 }
 
 .whtlink {
@@ -383,7 +373,7 @@ p.demos a.current-demo:hover{
 	filter: alpha(opacity=100);
 	text-transform: uppercase;
 	text-shadow: 5px 5px 15px #757575;
-	line-height: 120px;
+	line-height: 200px;
 	padding: 30px 0px 20px 0px;
 	font-family: 'Oswald', Arial, sans-serif;
 	-webkit-animation: fromBack 1.2s;
@@ -432,7 +422,7 @@ p.demos a.current-demo:hover{
 	z-index: 1000;
 	position: relative;
 	border-radius: 50%;
-	max-width: 250px;
+	max-width: 20%;
 	box-shadow: 10px 10px 10px black;
 	-webkit-animation: fromBack 3.2s;
 	-moz-animation: fromBack 2.6s;
@@ -627,4 +617,63 @@ p.demos a.current-demo:hover{
 		transform: scale(1);
 		opacity: 1;
 	}
+}
+
+@media only screen 
+	and (max-width: 700px) {
+		#dropdown-menu {
+			display: none;
+		}
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 580px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+  	body {
+	    background: url(../images/logo_T.J._lgred.png) 100px 50px fixed no-repeat #ffffff;
+	    background-size: 125%;
+  	}
+
+  	.header h1 {
+  		float: left;
+  		font-size: 85%;
+  	}
+
+  	.sp-content h1:first-child {
+  		font-size: 80px;
+  		text-align: center;
+  		color: #000;
+  		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  		filter: alpha(opacity=100);
+  		text-transform: uppercase;
+  		text-shadow: 5px 5px 15px #757575;
+  		line-height: 140px;
+  		padding: 30px 0px 20px 0px;
+  		font-family: 'Oswald', Arial, sans-serif;
+  		-webkit-animation: fromBack 1.2s;
+  		-moz-animation: fromBack 0.6s;
+  		-ms-animation: fromBack 1.2s;
+  		animation: fromBack 1.2s;
+  	}
+
+  	.sp-content img {
+  		display: inline-block;
+  		z-index: 1000;
+  		position: relative;
+  		border-radius: 50%;
+  		max-width: 30%;
+  		box-shadow: 10px 10px 10px black;
+  		-webkit-animation: fromBack 3.2s;
+  		-moz-animation: fromBack 2.6s;
+  		-ms-animation: fromBack 3.2s;
+  		animation: fromBack 3.2s;
+  	}
+
+  	.iframe-homepage {
+  		padding-top: 20px;
+  		width: 90%;
+  		height: 315px;
+  	}
+
 }

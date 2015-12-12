@@ -9,34 +9,44 @@
     <meta name="keywords" content="percussion, troy, musician, education, tabla, drum, partch, grammy, los angeles, comics" />
     <meta name="author" content="Codrops, massively destructed by JustJiffy" />
 
+   <!-- General Styles -->
     <link rel="stylesheet" type="text/css" href="css/style1.css" />
+		
+	 <!-- jQuery -->    
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+   <!-- Animsition -->
+    <link src="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.1/css/animsition.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.1/js/animsition.min.js"></script>
+    
+   <!-- FONTS -->
     <link href='http://fonts.googleapis.com/css?family=Oswald:700,400,300' rel='stylesheet' type='text/css' />
 		<link href='http://fonts.googleapis.com/css?family=Yantramanav:400,100' rel='stylesheet' type='text/css'>
     
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 				
 		<!--[if lt IE 10]>
 				<link rel="stylesheet" type="text/css" href="css/style1IE.css" />
 		<![endif]-->
   </head>
+
   <body>
    	<div class="container">
 	    <div class="header">
-	        <h1><strong>T.J. Troy: </strong>Percussionist, Educator, Voice Over Actor</h1>
+	        <h1><strong>T.J. Troy:</strong>Percussionist, Educator, Comics Creator</h1>
 	          
-         <span class="right">
+         <span id="dropdown-menu" class="right">
 					<ul id="navlist">
 					<li id="active"><a href="#">
             <h1><strong>Take me to...&nbsp;</strong></h1></a> 
-							<ul id="subnavlist">
+							<ul id="subnavlist" class="animsition">
 								<li id="subactive"><a href="index.html">home</a></li>
 								<li><a href="samples/index.html">percussion samples</a></li>
 								<li><a href="rdh/index.html">run downhill</a></li>
 								<li><a href="photos/index.html">photos</a></li>
 								<li><a href="press/index.html">press</a></li>
 								<li><a href="bio/index.html">bio/cv</a></li>
-								<li><a href="contact/index.html">contact</a></li>
-								<li><a href="contact/index.html">additional links</a></li>
+								<li><a href="#contact">contact</a></li>
+								<li><a href="#additional-links">additional links</a></li>
 							</ul>	
          </span>
 
@@ -57,48 +67,65 @@
 					 <div class="clr"></div>
 				</div>
 					
+        </div> <!-- end sp-container -->
 
 				<div class="sp-holding">
-					<p>This site is under construction, but please feel free to check out what's here and get connected.
+					<p class="glow-text" style="padding: 0 10%">
+
+            Grammy&#174; Award-winning artist T.J. Troy brings virtuosity, style, knowledge and experience to the broad range of percussion music he champions. From the deep traditions of Indian and Middle Eastern percussion, to the rich complexity of Contemporary Classical Music, to the sheer power of modern drumset playing, T.J. has developed lines of symmetry and expression that allow him to move freely between styles.
+
 					</p>
 					
 					<p class="demos">
-						<a class="#" href="index.html">Facebook</a>
-						<a href="#">LinkedIn</a>
-						<a href="#">Bandcamp</a>
-						<a href="#">YouTube</a>
+						<a href="https://www.facebook.com/tjtroytabla" target="_blank">Facebook</a>
+						<a href="https://www.linkedin.com/in/tjtroy" target="blank">LinkedIn</a>
+						<a href="https://www.youtube.com/playlist?list=PLt9yTsWLCWCm7TJR9CiAcpgD8aSmINYh8" target="blank">YouTube</a>
 					</p>
 					
-					<div>
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/ngU76Rc-zKQ" frameborder="0" allowfullscreen></iframe>
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/zlQspmqSVMg" frameborder="0" allowfullscreen></iframe>
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/UeNiKWPsaFU" frameborder="0" allowfullscreen></iframe>
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/QvPUG8giH0I" frameborder="0" allowfullscreen></iframe>
-						 <div class="clr">
-					 </div>
-			</div> <!-- end sp-holding -->
-	
+					<div style="text-align: center;">
+            <iframe class="iframe-homepage" src="https://www.youtube.com/embed/EE6Oz-sfsMc?list=PLt9yTsWLCWCm7TJR9CiAcpgD8aSmINYh8" frameborder="0" allowfullscreen></iframe>
+						<iframe class="iframe-homepage" src="https://www.youtube.com/embed/oxu28Vt7ors?list=PLt9yTsWLCWCm7TJR9CiAcpgD8aSmINYh8" frameborder="0" allowfullscreen></iframe>
+            <iframe class="iframe-homepage" src="https://www.youtube.com/embed/zlQspmqSVMg" frameborder="0" allowfullscreen></iframe>
+            <iframe class="iframe-homepage" src="https://www.youtube.com/embed/UeNiKWPsaFU" frameborder="0" allowfullscreen></iframe>
+          </div>
+						 <div class="clr"></div>
+			 </div> <!-- end sp-holding -->
 
 			<div class="sp-morecontent">
 				<div class="box">
-					<h1>BIOGRAPHY</h1>
-					
-					<p>Full Bio Coming Soon!</p>			
+          <h1>take me to...</h1> 
+          <div class="clr"></div>
+            <a href="#"><div class="bubble">Percussion Samples</div></a>
+            <a href="#"><div class="bubble">Run<br>Downhill</div></a>
+            <a href="#"><div class="bubble">Photos</span></div></a>
+            <a href="#"><div class="bubble">Press</div></a>
+            <a href="#"><div class="bubble">Bio/<br>C.V.</div></a>
+        </div>
 
-					<h1>CURRICULUMN VITAE</h1>
-							<p><strong>EDUCATION</strong> - Updates coming soon <br>This section in progress.</p>
-							<p><strong>PERFORMANCES</strong> - Updates coming soon <br>This section in progress.</p>
-							<p><strong>OTHER</strong> - Updates coming soon <br>This section in progress.</p>
-							<p><strong>PROJECTS</strong> - Updates coming soon <br>This section in progress.</p>
-							<p><strong>MORE</strong> - Updates coming soon <br>This section in progress.</p>
-							<p><strong>STILL MORE</strong> - Updates coming soon <br>This section in progress.</p>
-							<p><strong>FINAL</strong> - Updates coming soon <br>This section in progress.</p>
+        <div class="box">
+          <a name="contact"><br><br><br></a>
+          <h1>CONTACT</h1>
+          <div style="height: 100vh"></div>
+          
+             <div class="clr"></div>
+        </div> <!-- end box -->
+
+        <div class="box">
+          <a name="additional-links"><br><br><br></a>
+					<h1>Additional Links</h1>
+					<div style="height: 100vh"></div>
+					
 						 <div class="clr"></div>
 				</div> <!-- end box -->
-			</div> <!-- end sp-morecontent -->
-		</div> <!-- end sp-container -->
-	</div><!-- end container -->				
+			</div> <!-- end sp-morecontent --> 
+  </div><!-- end container -->        
 	
 	<script	type="text/javascript" src="js/script.js"></script>
+	<script>
+	$(document).ready(function() {
+	  $('.animsition').animsition();
+	});
+	</script>
+
  </body>
 </html>
