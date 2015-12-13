@@ -419,6 +419,7 @@ p.demos a.current-demo:hover{
 
 .sp-content img {
 	display: inline-block;
+	margin: 0 10px;
 	z-index: 1000;
 	position: relative;
 	border-radius: 50%;
