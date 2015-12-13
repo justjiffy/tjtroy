@@ -125,7 +125,7 @@ margin-right: 35px; }
 ul#navlist li a
 {
 color: #ffffff;
-font-size: 14px;
+font-size: 18px;
 font-weight: 100;
 background-color: #000;
 }
@@ -142,23 +142,23 @@ color: #a11923;
 background-color: #000000;
 }
 
-ul#subnavlist { display: none; }
+ul#subnavlist { 
+	display: none;
+}
 
 ul#subnavlist li { float: left; }
 
-ul#subnavlist li a
-{
+ul#subnavlist li a {
 padding: 0px;
 margin: 0px;
 }
 
-ul#navlist li:hover ul#subnavlist
-{
-display: block;
-position: absolute;
-font-size: 8pt;
-padding-left: 5px;
-padding-top: 30px;
+ul#navlist li:hover ul#subnavlist {
+	display: block;
+	position: absolute;
+	font-size: 8pt;
+	padding-left: 5px;
+	padding-top: 30px;
 }
 
 ul#navlist li:hover ul#subnavlist li a
@@ -292,6 +292,16 @@ p.demos a.current-demo:hover{
 	z-index: 100;
 	width: 100%;
 	display: block;
+}
+
+.sp-morecontent h3 {
+	font-size: 24px;
+	color: #000;
+	font-weight: 700;
+	text-shadow: 5px 5px 15px #757575;
+	font-family: 'Oswald', Arial, sans-serif;
+	text-transform: uppercase;
+	text-align: left;
 }
 
 .sp-morecontent a {
@@ -625,6 +635,10 @@ p.demos a.current-demo:hover{
 		#dropdown-menu {
 			display: none;
 		}
+
+		#samples-howto {
+			display: none;
+		}
 }
 
 @media only screen 
@@ -676,5 +690,4 @@ p.demos a.current-demo:hover{
   		width: 90%;
   		height: 315px;
   	}
-
 }
