@@ -721,4 +721,17 @@ p.demos a.current-demo:hover {
   		display: inline-table;
   		font-size: 75%;
   	}
+  	.main-contact {
+  		width: 40%;	
+  		font-size: 20px;
+  		padding: 5px;
+  		border: 2px solid gray;
+  	}
+
+  	.main-message {
+  		width: 80%;
+  		font-size: 18px;
+  		padding: 5px;
+  		border: 2px solid gray;
+  	}
 }
