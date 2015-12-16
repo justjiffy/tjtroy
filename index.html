@@ -45,7 +45,7 @@
 								<li><a href="photos/index.html">photos</a></li>
 								<li><a href="press/index.html">press</a></li>
 								<li><a href="bio/index.html">bio/cv</a></li>
-								<li><a href="#contact">contact</a></li>
+								<li><a href="#contact-form">contact</a></li>
 								<li><a href="#additional-links">additional links</a></li>
 							</ul>	
          </span>
@@ -103,20 +103,35 @@
             <br><br>
         </div>
 
+        <a name="contact-form" class="anchor"></a>
         <div class="box">
-          <a name="contact"><br><br><br></a>
           <h1>CONTACT</h1>
-          <div style="height: 100vh"></div>
-          
-             <div class="clr"></div>
+          <div style="height: 100vh">
+            <form action="http://formspree.io/drummer@gmail.com" method="POST">
+              <div class="form-inline"> 
+                <input type="text" name="name" class="form-control main-contact" placeholder="Your Name">
+                <input type="email" name="_replyto" class="form-control main-contact" placeholder="your_reply@email.com">
+              </div>
+                <br>
+              <div class="form-group">
+                <textarea name="body" class="form-control main-message" rows="10" placeholder="Message: Hey T.J.! I wanted to talk to you about..."></textarea>
+                <input type="hidden" name="_next" value="http://www.tjtroy.com/thanks.html" />
+                <button id="contact" type="submit" style="width: 50%; display: block; margin: 0 auto; background-color: black; border-radius: 10px" value="Send" class="btn btn-default"><p style="font-size: 20px; margin-bottom: 5px; text-align: center; color: white">SEND MESSAGE</p></button>
+              </div>
+            </form>
+          </div>        
         </div> <!-- end box -->
 
+        <a name="additional-links" class="anchor"></a>
         <div class="box">
-          <a name="additional-links"><br><br><br></a>
-					<h1>Additional Links</h1>
-					<div style="height: 100vh"></div>
-					
+          <h1>Additional Links</h1>
+          <div style="height: 100vh">
 						 <div class="clr"></div>
+               <a href="http://www.rundownhillmusic.com" target="_blank"><div class="bubble">Run<br>Downhill</div></a>
+               <a href="http://www.mesto.org" target="_blank"><div class="bubble">MESTO</div></a>
+               <a href="http://www.tjtroyvo.com" target="_blank"><div class="bubble">Voice<br>Over</span></div></a>
+               <br><br>
+          </div>
 				</div> <!-- end box -->
 			</div> <!-- end sp-morecontent --> 
   </div><!-- end container -->        
