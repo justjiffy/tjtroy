@@ -3,7 +3,7 @@
     <head>
         <title>T.J. TROY - Photos</title>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="T.J. Troy - percussion, instructor, comics, writer, composer, voiceover" />
         <meta name="keywords" content="percussion, troy, musician, education, tabla, drum, partch, grammy, los angeles, comics" />
         <meta name="author" content="Codrops, massively destructed by JustJiffy" />
@@ -14,16 +14,17 @@
 		<!--[if lt IE 10]>
 				<link rel="stylesheet" type="text/css" href="css/style1IE.css" />
 		<![endif]-->
+        <script type="text/javascript" src="../js/instafeed.min.js"></script>
     </head>
     <body class="other">
         <div class="container">
        <div class="header">
              <h1><strong>T.J. Troy:</strong>Percussionist, Educator, Comics Creator</h1>
-               
+
             <span id="dropdown-menu" class="right">
              <ul id="navlist">
              <li id="active"><a href="#">
-               <h1><strong>Take me to...&nbsp;</strong></h1></a> 
+               <h1><strong>Take me to...&nbsp;</strong></h1></a>
                  <ul id="subnavlist" class="animsition">
                    <li id="subactive"><a href="../index.html">home</a></li>
                    <li><a href="../samples/index.html">percussion samples</a></li>
@@ -33,7 +34,7 @@
                    <li><a href="../bio/index.html">bio/cv</a></li>
                    <li><a href="../index.html#contact-form">contact</a></li>
                    <li><a href="../index.html#additional-links">additional links</a></li>
-                 </ul> 
+                 </ul>
             </span>
 
            <div class="clr"></div>
@@ -42,15 +43,20 @@
 
 				<div class="sp-container">
 					<div class="box">
-					<h1>PHOTOS</h1>
-  					<img src="../images/photos1.png" width="100%" class="no-box-shadow"/> 
-  					<img src="../images/photos2.png" width="100%" class="no-box-shadow"/>
-  					</div></div>
+  					<h1>PHOTOS</h1>
+    				<div id="instafeed"></div>
+		      </div>
+		    </div>
 
-		            </div>
-		          
-		         </div>
+        <script>
+          var feed = new Instafeed({
+              get: 'user',
+              userId: '1569125810',
+              clientId: 'cd52513b4ad04996b712dd40ff523962',
+              resolution: 'standard_resolution',
+              template: '<img src="{{image}}" style="padding: 10px; border-radius: 50%;" width="20%"/>'
+          });
+          feed.run();
+        </script>
 
-
-
-		    </body>
+	 </body>
