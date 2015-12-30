@@ -108,7 +108,7 @@ ul#navlist {
 	font-size: 12px;
 	text-transform: uppercase;
 	float: right;
-	 }
+}
 
 ul#navlist a {
 	text-decoration: none;
@@ -220,7 +220,6 @@ p.demos a.current-demo:hover {
 	display: inline-block;
 	position: relative;
 	width: 100%;
-	height: 100%;
 	margin: 0 auto 0 auto;
 	text-align: center;
 	padding-bottom: 25px
