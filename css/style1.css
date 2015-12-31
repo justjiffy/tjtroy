@@ -1,12 +1,4 @@
-/* NOTES FOR MEDIA QUERY
-Create a new header div and hide the main one
-Take out the tex after T.J. TROY: 
-Leave take me to.. and navigation the same. 
-*/
-
-/* General Demo Style */
-
-* { margin: 0; padding: 0; border: 0; } 
+* { margin: 0; padding: 0; border: 0; }
 
 body {
 	background: url(../images/logo_T.J._lgred.png) 300px 50px fixed no-repeat #ffffff;
@@ -22,12 +14,11 @@ body {
 	height: 100%;
 }
 
-body::-webkit-scrollbar { 
-  /* This is the magic bit */
+body::-webkit-scrollbar {
   display: none;
 }
 
-a{
+a {
 	color: #fff;
 	text-decoration: none;
 }
@@ -35,7 +26,7 @@ a{
 h1 {
 	font-size: 18px;
 	display: inline;
-	font-weight: 200; 
+	font-weight: 200;
 }
 
 h1.bold {
@@ -52,6 +43,11 @@ h1.bold {
 	padding-top: 20px;
 	width: 100%;
 	height: 100vh;
+}
+
+.anchor {
+	margin-top: 100px;
+	display: block;
 }
 
 /* Header Style */
@@ -71,16 +67,18 @@ h1.bold {
 	-webkit-box-shadow: 1px 0px 2px #000;
 	box-shadow: 1px 0px 2px #000;
 }
+
 .header a{
-	text-decoration: none;
 	padding: 0px 10px;
 	letter-spacing: 1px;
 	display: block;
 	float: left;
 }
+
 .header a:hover{
 	color: #fff;
 }
+
 .header span.right{
 	float: right;
 	padding-right: 0px;
@@ -96,7 +94,7 @@ h1.bold {
 	font-size: 24px;
 }
 
-ul#navlist { 
+ul#navlist {
 	display: inline;
 	font-family:'Oswald', Arial, sans-serif;
 	color: white;
@@ -104,81 +102,73 @@ ul#navlist {
 	font-size: 12px;
 	text-transform: uppercase;
 	float: right;
-	 }
-
-ul#navlist a
-{
-text-decoration: none;
 }
 
-ul#navlist, ul#navlist ul, ul#navlist li
-{
-margin: 0px;
-padding: 0px;
-list-style-type: none;
-float: right;
+ul#navlist, ul#navlist ul, ul#navlist li {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	float: right;
 }
 
-ul#navlist li { float: right;
-margin-right: 35px; }
-
-ul#navlist li a
-{
-color: #ffffff;
-font-size: 14px;
-font-weight: 100;
-background-color: #000;
+ul#navlist li {
+	float: right;
+	margin-right: 35px;
 }
 
-ul#navlist li a:hover
-{
-color: #fff6cc;
-background-color: #000;
+ul#navlist li a {
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: 100;
+	background-color: #000;
 }
 
-ul#navlist li a:active
-{
-color: #a11923;
-background-color: #000000;
+ul#navlist li a:hover {
+	color: #fff6cc;
+	background-color: #000;
 }
 
-ul#subnavlist { display: none; }
-
-ul#subnavlist li { float: left; }
-
-ul#subnavlist li a
-{
-padding: 0px;
-margin: 0px;
+ul#navlist li a:active {
+	color: #a11923;
+	background-color: #000000;
 }
 
-ul#navlist li:hover ul#subnavlist
-{
-display: block;
-position: absolute;
-font-size: 8pt;
-padding-left: 5px;
-padding-top: 30px;
+ul#subnavlist {
+	display: none;
 }
 
-ul#navlist li:hover ul#subnavlist li a
-{
-display: block;
-width: 10em;
-border: none;
-padding-left: 5px;
+ul#subnavlist li {
+	float: left;
 }
 
-.clr{
-	clear: both;
+ul#subnavlist li a {
+	padding: 0px;
+	margin: 0px;
 }
+
+ul#navlist li:hover ul#subnavlist {
+	display: block;
+	position: absolute;
+	font-size: 8pt;
+	padding-left: 5px;
+	padding-top: 30px;
+}
+
+ul#navlist li:hover ul#subnavlist li a {
+	display: block;
+	width: 10em;
+	border: none;
+	padding-left: 5px;
+}
+
+.clr { clear: both; }
 
 /* end header style */
 
 
 /* container style */
 
-.container{
+.container {
 	display: inline-block;
 	width: 100%;
 	overflow: scroll;
@@ -186,16 +176,14 @@ padding-left: 5px;
 	overflow-x: hidden;
 }
 
-p.demos{
-    position:relative;
-    z-index: 1000;
-	padding: 4px;
+p.demos {
+  position:relative;
+	padding: 5px;
 	text-align: center;
-	-webkit-animation: appear 0.6s ease-in-out 3.2s backwards;
-	-moz-animation: appear 0.6s ease-in-out 3.2s backwards;
 }
-p.demos a{
-    display: inline-block;
+
+p.demos a {
+  display: inline-block;
 	padding: 2px 4px;
 	background: #fff;
 	color: #000;
@@ -203,19 +191,16 @@ p.demos a{
 	text-transform: uppercase;
 	font-size: 14px;
 	box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
-	-webkit-transition: all 0.2s linear;
-	-moz-transition: all 0.2s linear;
-	-o-transition: all 0.2s linear;
-	-ms-transition: all 0.2s linear;
-	transition: all 0.2s linear;
 }
-p.demos a:hover{
-    color: #fff;
+
+p.demos a:hover {
+   color: #fff;
 	background: #555;
 }
+
 p.demos a.current-demo,
-p.demos a.current-demo:hover{
-    font-weight: bold;
+p.demos a.current-demo:hover {
+  font-weight: bold;
 	background: #333;
 	color: #fff;
 }
@@ -256,6 +241,7 @@ p.demos a.current-demo:hover{
 	float: left;
 	padding: 10px;
 }
+
 .sp-content {
 	position: relative;
 	display: inline-block;
@@ -280,18 +266,27 @@ p.demos a.current-demo:hover{
 	top: 50px;
 }
 
-.sp-holding p {color: white;
-}
+.sp-holding p { color: white; }
 
 .sp-morecontent {
 	background-image: url(../images/Untitled-3.png);
-	background-repeat: repeat; 
+	background-repeat: repeat;
 	background-attachment: fixed;
 	background-color: white;
 	position: relative;
 	z-index: 100;
 	width: 100%;
 	display: block;
+}
+
+.sp-morecontent h3 {
+	font-size: 24px;
+	color: #000;
+	font-weight: 700;
+	text-shadow: 5px 5px 15px #757575;
+	font-family: 'Oswald', Arial, sans-serif;
+	text-transform: uppercase;
+	text-align: left;
 }
 
 .sp-morecontent a {
@@ -321,12 +316,26 @@ p.demos a.current-demo:hover{
 	background-color: #999999;
 }
 
+.main-contact {
+	width: 25%;
+	font-size: 20px;
+	padding: 5px;
+	border: 2px solid gray;
+}
+
+.main-message {
+	width: 50%;
+	font-size: 18px;
+	padding: 5px;
+	border: 2px solid gray;
+}
+
 .box {
 	margin: 50px 5% 0 5%;
-	padding: 10px 0 0 0;
+	padding: 10px;
 	width: 90%;
 	display: inline-block;
-	background-color: rgba(255, 255, 255, 0.75);
+	background-color: rgba(255, 255, 255, 0.90);
 	text-align: center;
 }
 
@@ -350,7 +359,7 @@ p.demos a.current-demo:hover{
 	text-align: left;
 	margin-top: 10px;
 	margin-left: 25C.V.px;
-	margin-bottom: 40px; 
+	margin-bottom: 40px;
 	text-shadow: 1px 1px 1px #ffffff;
 }
 
@@ -365,6 +374,7 @@ p.demos a.current-demo:hover{
 .whtlink a:visited {
 	color: white;
 }
+
 .sp-content h1:first-child {
 	font-size: 100px;
 	text-align: center;
@@ -377,38 +387,11 @@ p.demos a.current-demo:hover{
 	padding: 30px 0px 20px 0px;
 	font-family: 'Oswald', Arial, sans-serif;
 	-webkit-animation: fromBack 1.2s;
-	-moz-animation: fromBack 0.6s;
+	-moz-animation: fromBack 1.2s;
 	-ms-animation: fromBack 1.2s;
 	animation: fromBack 1.2s;
 }
-.sp-content h1.sp-title {
-	font-size: 90px;
-	line-height: 80px;
-	position: absolute;
-	top: 50px;
-	left: 160px;
-	width: 470px;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	border-radius: 50%;
-	background-color: #fff;
-	background-color: rgba(255, 255, 255, 0.3);
-	padding-top: 155px;
-	height: 305px;
-	text-transform: uppercase;
-	text-align: center;
-	color: #518f7e;
-	text-shadow: 5px 1px 1px rgba(255,255,255,0.9);
-	font-family: 'Oswald', Arial black, sans-serif;
-	-webkit-animation: fadeInColor 1.2s;
-	-moz-animation: fadeInColor 1.2s;
-	-ms-animation: fadeInColor 1.2s;
-	animation: fadeInColor 1.2s;
-}
-.sp-content h1:last-child em {
-	font-family: 'Oswald', serif;
-	text-transform: none;
-}
+
 .sp-content h2 {
 	font-size: 36px;
 	text-align: center;
@@ -419,13 +402,14 @@ p.demos a.current-demo:hover{
 
 .sp-content img {
 	display: inline-block;
+	margin: 0 10px;
 	z-index: 1000;
 	position: relative;
 	border-radius: 50%;
 	max-width: 20%;
 	box-shadow: 10px 10px 10px black;
 	-webkit-animation: fromBack 3.2s;
-	-moz-animation: fromBack 2.6s;
+	-moz-animation: fromBack 3.2s;
 	-ms-animation: fromBack 3.2s;
 	animation: fromBack 3.2s;
 }
@@ -439,69 +423,20 @@ p.demos a.current-demo:hover{
 	border: none;
 }
 
+button#contact {
+	width: 70%;
+	display: block;
+	margin: 0 auto;
+	background-color: black;
+	border-radius: 10px
+}
+
+button#contact:hover {
+	cursor: pointer;
+}
+
 
 /* -webkit- */
-
-
-@-webkit-keyframes appear{
-	0%{
-		opacity: 0;
-	}
-	100%{
-		opacity: 1;
-	}
-}
-@-moz-keyframes appear{
-	0%{
-		opacity: 0;
-	}
-	100%{
-		opacity: 1;
-	}
-}
-
-@-webkit-keyframes fadeOut{
-	0%{
-		opacity: 1;
-	}
-	100%{
-		opacity: 0;
-	}
-}
-@-webkit-keyframes fadeInColor{
-	0%{
-		opacity: 0;
-		background-color: rgba(255,255,255,0);
-	}
-	50%{
-		opacity: 0.5;
-		background-color: rgba(255,255,255,0);
-	}
-	100%{
-		opacity: 1;
-		background-color: rgba(255,255,255,0.3);
-	}
-}
-@-webkit-keyframes slideIn{
-	0%{
-		opacity: 0;
-		-webkit-transform: translateX(-200px);
-	}
-	100%{
-		opacity: 1;
-		-webkit-transform: translateX(0px);
-	}
-}
-@-webkit-keyframes sizeDownMove{
-	0%{
-		-webkit-transform: scale(1);
-		left: 100px;
-	}
-	100%{
-		-webkit-transform: scale(0.6);
-		left: 0px;
-	}
-}
 @-webkit-keyframes fromBack{
 	0%{
 		-webkit-transform: scale(0);
@@ -512,49 +447,7 @@ p.demos a.current-demo:hover{
 		opacity: 1;
 	}
 }
-/* -moz- */
-@-moz-keyframes fadeOut{
-	0%{
-		opacity: 1;
-	}
-	100%{
-		opacity: 0;
-	}
-}
-@-moz-keyframes fadeInColor{
-	0%{
-		opacity: 0;
-		background-color: rgba(255,255,255,0);
-	}
-	50%{
-		opacity: 0.5;
-		background-color: rgba(255,255,255,0);
-	}
-	100%{
-		opacity: 1;
-		background-color: rgba(255,255,255,0.3);
-	}
-}
-@-moz-keyframes slideIn{
-	0%{
-		opacity: 0;
-		-moz-transform: translateX(-200px);
-	}
-	100%{
-		opacity: 1;
-		-moz-transform: translateX(0px);
-	}
-}
-@-moz-keyframes sizeDownMove{
-	0%{
-		-moz-transform: scale(1);
-		left: 100px;
-	}
-	100%{
-		-moz-transform: scale(0.6);
-		left: 0px;
-	}
-}
+
 @-moz-keyframes fromBack{
 	0%{
 		-moz-transform: scale(0);
@@ -565,49 +458,7 @@ p.demos a.current-demo:hover{
 		opacity: 1;
 	}
 }
-/**/
-@keyframes fadeOut{
-	0%{
-		opacity: 1;
-	}
-	100%{
-		opacity: 0;
-	}
-}
-@keyframes fadeInColor{
-	0%{
-		opacity: 0;
-		background-color: rgba(255,255,255,0);
-	}
-	50%{
-		opacity: 0.5;
-		background-color: rgba(255,255,255,0);
-	}
-	100%{
-		opacity: 1;
-		background-color: rgba(255,255,255,0.3);
-	}
-}
-@keyframes slideIn{
-	0%{
-		opacity: 0;
-		transform: translateX(-200px);
-	}
-	100%{
-		opacity: 1;
-		transform: translateX(0px);
-	}
-}
-@keyframes sizeDownMove{
-	0%{
-		transform: scale(1);
-		left: 100px;
-	}
-	100%{
-		transform: scale(0.6);
-		left: 0px;
-	}
-}
+
 @keyframes fromBack{
 	0%{
 		transform: scale(0);
@@ -619,15 +470,19 @@ p.demos a.current-demo:hover{
 	}
 }
 
-@media only screen 
+@media only screen
 	and (max-width: 700px) {
 		#dropdown-menu {
 			display: none;
 		}
+
+		#samples-howto {
+			display: none;
+		}
 }
 
-@media only screen 
-  and (min-device-width: 320px) 
+@media only screen
+  and (min-device-width: 320px)
   and (max-device-width: 580px)
   and (-webkit-min-device-pixel-ratio: 2) {
   	body {
@@ -652,7 +507,7 @@ p.demos a.current-demo:hover{
   		padding: 30px 0px 20px 0px;
   		font-family: 'Oswald', Arial, sans-serif;
   		-webkit-animation: fromBack 1.2s;
-  		-moz-animation: fromBack 0.6s;
+  		-moz-animation: fromBack 1.2s;
   		-ms-animation: fromBack 1.2s;
   		animation: fromBack 1.2s;
   	}
@@ -665,7 +520,7 @@ p.demos a.current-demo:hover{
   		max-width: 30%;
   		box-shadow: 10px 10px 10px black;
   		-webkit-animation: fromBack 3.2s;
-  		-moz-animation: fromBack 2.6s;
+  		-moz-animation: fromBack 3.2s;
   		-ms-animation: fromBack 3.2s;
   		animation: fromBack 3.2s;
   	}
@@ -676,4 +531,27 @@ p.demos a.current-demo:hover{
   		height: 315px;
   	}
 
+  	.bubble {
+  		width:125px;
+  		height: 85px;
+  		border-radius: 50%;
+  		background-color: black;
+  		padding-top: 40px;
+  		margin: 10px 0 auto;
+  		display: inline-table;
+  		font-size: 75%;
+  	}
+  	.main-contact {
+  		width: 40%;
+  		font-size: 20px;
+  		padding: 5px;
+  		border: 2px solid gray;
+  	}
+
+  	.main-message {
+  		width: 80%;
+  		font-size: 18px;
+  		padding: 5px;
+  		border: 2px solid gray;
+  	}
 }
