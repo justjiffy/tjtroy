@@ -94,6 +94,20 @@ h1.bold {
 	font-size: 24px;
 }
 
+footer {
+	overflow: scroll;
+}
+
+td {
+	vertical-align: top;
+	padding-bottom: 25px;
+}
+
+li {
+	list-style-type: none;
+	font-weight: lighter;
+}
+
 ul#navlist {
 	display: inline;
 	font-family:'Oswald', Arial, sans-serif;
@@ -521,6 +535,7 @@ button#contact:hover {
 		td {
 			width: 100%;
 			display: block;
+			font-size: 20px;
 		}
 }
 
@@ -611,5 +626,14 @@ button#contact:hover {
   		position: relative;
   		margin: 10% 0;
   		background: #fff;
+  	}
+
+  	.box {
+  		margin: 50px 2% 0 2%;
+  		padding: 10px;
+  		width: 90%;
+  		display: inline-block;
+  		background-color: rgba(255, 255, 255, 0.90);
+  		text-align: center;
   	}
 }
