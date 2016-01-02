@@ -449,11 +449,18 @@ button#contact:hover {
 	padding-top: 25px;
 }
 
-.modalImg > img {
-	width: 600px;
-	position: relative;
-	margin: 5% auto;
-	background: #fff;
+.photo-feed {
+	width: 25%;
+	border-radius: 50%;
+	padding: 5px;
+}
+
+.photo-feed:hover {
+	cursor: zoom-in;
+}
+
+.zoom-out {
+	cursor: zoom-out;
 }
 
 .close {
@@ -466,6 +473,7 @@ button#contact:hover {
 	top:10%;
 	right: 25%;
 }
+
 /* -webkit- */
 @-webkit-keyframes fromBack{
 	0%{
@@ -508,6 +516,11 @@ button#contact:hover {
 
 		#samples-howto {
 			display: none;
+		}
+
+		td {
+			width: 100%;
+			display: block;
 		}
 }
 
@@ -583,5 +596,20 @@ button#contact:hover {
   		font-size: 18px;
   		padding: 5px;
   		border: 2px solid gray;
+  	}
+
+  	.photo-feed {
+  		width: 40%;
+  	}
+
+  	.photo-feed:hover {
+  		cursor: pointer;
+  	}
+
+  	.popup {
+  		width: 300px;
+  		position: relative;
+  		margin: 10% 0;
+  		background: #fff;
   	}
 }

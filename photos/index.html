@@ -54,7 +54,7 @@
               userId: '1569125810',
               clientId: 'cd52513b4ad04996b712dd40ff523962',
               resolution: 'standard_resolution',
-              template: '<img src="{{image}}" alt="{{caption}}" class="photo-feed" style="padding: 10px; border-radius: 50%;" width="25%" />',
+              template: '<img src="{{image}}" alt="{{caption}}" class="photo-feed" />',
               after: function() {
                       var photos = document.querySelectorAll('.photo-feed');
                       for (i=0; i<photos.length; i++) {
@@ -70,9 +70,10 @@
 
           function openModal(img) {
             var modal = document.querySelector('#modal').style;
+            var photo = document.querySelector('img');
             modal.opacity = 1;
             modal.zIndex = 99999;
-            document.querySelector('#modal').innerHTML = '<div id="close"><img src="' + img + '" /></div>';
+            document.querySelector('#modal').innerHTML = '<div id="close"><img class="popup zoom-out" src="' + img + '" /></div>';
             closeModal();
           }
 
@@ -81,8 +82,5 @@
             var clickArea = document.querySelector('#close');
             clickArea.onclick = function() { modal.opacity = 0; modal.zIndex = -99999 };
           }
-
-
-
         </script>
     </body>
