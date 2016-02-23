@@ -190,6 +190,17 @@ ul#navlist li:hover ul#subnavlist li a {
 	overflow-x: hidden;
 }
 
+.social-media {
+  text-align: center;
+}
+
+.social-media * {
+  padding: 10px 5px;
+}
+
+.social-media * :hover {
+  color: #cccccc;
+}
 p.demos {
   position:relative;
 	padding: 5px;
