@@ -10,6 +10,7 @@
         <link rel="stylesheet" type="text/css" href="css/style1.css" />
         <link href='http://fonts.googleapis.com/css?family=Oswald:700,400,300' rel='stylesheet' type='text/css' />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
     <!--[if lt IE 10]>
         <link rel="stylesheet" type="text/css" href="css/style1IE.css" />
@@ -18,7 +19,7 @@
 
   <body>
    	<div class="container">
-	    <div class="header">
+	    <div class="header" id="navbar" style="display: none">
 	        <h1><strong>T.J. Troy:</strong>Percussionist, Educator, Comics Creator</h1>
 
          <span id="dropdown-menu" class="right">
@@ -42,39 +43,27 @@
 	  </div> <!-- end header -->
 
     <div class="sp-container">
-				<div class="sp-content">
-					<img src="images/illustrated.jpeg" />
-					<img src="images/rdh.jpeg" />
-					<img src="images/riq.jpeg" />
-					<img src="images/partch.jpeg" /><br>
+				<div class="sp-content" id="splash">
+					<img id="sp-c-1" src="images/illustrated.jpeg" />
+					<img id="sp-c-2" src="images/rdh.jpeg" />
+					<img id="sp-c-3" src="images/riq.jpeg" />
+					<img id="sp-c-4" src="images/partch.jpeg" /><br>
 						<span class="home"><h1 class="bold">T.J. Troy</h1></span><br>
-					<img src="images/tabla.jpeg" />
-					<img src="images/guitar.jpeg" />
-					<img src="images/tj.jpeg" />
-					<img src="images/dance.jpeg" />
+					<img id="sp-c-5" src="images/tabla.jpeg" />
+					<img id="sp-c-6" src="images/guitar.jpeg" />
+					<img id="sp-c-7" src="images/tj.jpeg" />
+					<img id="sp-c-8" src="images/dance.jpeg" />
 					 <div class="clr"></div>
 				</div>
 
         </div> <!-- end sp-container -->
-
-				<div class="sp-holding">
-					<p class="glow-text" style="padding: 0 10%">
+      <div id="loadSecond">
+				<div class="sp-holding" id="bio">
+					<p class="glow-text" style="padding: 30px 10%">
 
             Grammy&#174; Award-winning artist T.J. Troy brings virtuosity, style, knowledge and experience to the broad range of percussion music he champions. From the deep traditions of Indian and Middle Eastern percussion, to the rich complexity of Contemporary Classical Music, to the sheer power of modern drumset playing, T.J. has developed lines of symmetry and expression that allow him to move freely between styles.
 
 					</p>
-
-          <div class="social-media">
-						<a href="https://www.facebook.com/tjtroytabla" target="_blank">
-              <i class="fa fa-4x fa-facebook-official"></i>
-            </a>
-						<a href="https://www.linkedin.com/in/tjtroy" target="blank">
-              <i class="fa fa-4x fa-linkedin-square"></i>
-            </a>
-						<a href="https://www.youtube.com/playlist?list=PLt9yTsWLCWCm7TJR9CiAcpgD8aSmINYh8" target="blank">
-              <i class="fa fa-4x fa-youtube-square"></i>
-            </a>
-          </div>
 
 					<div style="text-align: center;">
             <iframe class="iframe-homepage" src="https://www.youtube.com/embed/EE6Oz-sfsMc?list=PLt9yTsWLCWCm7TJR9CiAcpgD8aSmINYh8" frameborder="0" allowfullscreen></iframe>
@@ -82,6 +71,19 @@
             <iframe class="iframe-homepage" src="https://www.youtube.com/embed/zlQspmqSVMg" frameborder="0" allowfullscreen></iframe>
             <iframe class="iframe-homepage" src="https://www.youtube.com/embed/UeNiKWPsaFU" frameborder="0" allowfullscreen></iframe>
           </div>
+
+          <div class="social-media">
+            <a href="https://www.facebook.com/tjtroytabla" target="_blank">
+              <i class="fa fa-4x fa-facebook-official"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/tjtroy" target="blank">
+              <i class="fa fa-4x fa-linkedin-square"></i>
+            </a>
+            <a href="https://www.youtube.com/playlist?list=PLt9yTsWLCWCm7TJR9CiAcpgD8aSmINYh8" target="blank">
+              <i class="fa fa-4x fa-youtube-square"></i>
+            </a>
+          </div>
+
 						 <div class="clr"></div>
 			 </div> <!-- end sp-holding -->
 
@@ -158,5 +160,66 @@
 
     <p style="position: fixed; bottom: 0; right: 25px; color: white; text-transform: uppercase;">Site Design and Development by <a href="http://www.justjiffy.com" target="_blank"><strong>www.JUSTJIFFY.com</strong></a></p>
   </footer>
+  <script>
+    var photoPosts = [];
+    var textPosts = [];
+
+    myJsonpCallback = function(data) {
+      var posts = data.response.posts;
+      var numPosts = data.response.blog.posts;
+      console.log(numPosts);
+      $.each(posts, function(key, value) {
+        if (value.type == "photo") {
+          photoPosts.push(value)
+        } else if (value.type == "text") {
+          textPosts.push(value);
+        }
+      });
+    console.log("PHOTO POSTS: ");
+    checkLog(photoPosts);
+    console.log("TEXT POSTS: ");
+    checkLog(textPosts);
+    }
+
+    checkLog = function(array) {
+      $.each(array, function(key, value) {
+        if (value.photos) {
+          console.log(value.photos[0].alt_sizes[3].url + " - " + value.caption);
+        } else console.log(value.title + " - " + value.body);
+      })
+    }
+
+    $.ajax({
+        type: "GET",
+        url : "https://api.tumblr.com/v2/blog/tjtroy.tumblr.com/posts",
+        dataType: "jsonp",
+        data: {
+            api_key : "JMCc448RKpEearLdRVbLGb9rd0bmXfIA9abEdJghuO2ZALHtjl",
+            jsonp : "myJsonpCallback"
+        }
+    });
+  </script>
+  <script type="text/javascript" id="scroll-header">
+    function scroll_style() {
+       var window_top = $(window).scrollTop();
+       var div_top = 1;
+
+       if (window_top > div_top){
+          console.log('show navigation');
+          $('#splash').slideUp("slow");
+          $('#loadSecond').fadeIn("slow");
+          $('#navbar').slideDown("slow");
+       } else {
+        $('#loadSecond').slideDown();
+        $('#navbar').slideUp();
+        $('#splash').fadeIn();
+        console.log('no show navigation') }
+    };
+
+    $(function() {
+      $(window).scroll(scroll_style);
+      scroll_style();
+     });
+  </script>
  </body>
 </html>
