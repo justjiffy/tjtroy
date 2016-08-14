@@ -65,11 +65,15 @@
 
 					</p>
 
-					<div style="text-align: center;">
-            <iframe class="iframe-homepage" src="https://www.youtube.com/embed/EE6Oz-sfsMc?list=PLt9yTsWLCWCm7TJR9CiAcpgD8aSmINYh8" frameborder="0" allowfullscreen></iframe>
-						<iframe class="iframe-homepage" src="https://www.youtube.com/embed/oxu28Vt7ors?list=PLt9yTsWLCWCm7TJR9CiAcpgD8aSmINYh8" frameborder="0" allowfullscreen></iframe>
-            <iframe class="iframe-homepage" src="https://www.youtube.com/embed/zlQspmqSVMg" frameborder="0" allowfullscreen></iframe>
-            <iframe class="iframe-homepage" src="https://www.youtube.com/embed/UeNiKWPsaFU" frameborder="0" allowfullscreen></iframe>
+					<div style="text-align: center; padding-right: 45px;">
+              <i class="fa fa-2x fa-chevron-right" id="next" aria-hidden="true" style="top: -200px; left: 700px;"></i>
+              <i class="fa fa-2x fa-chevron-left" id="prev" aria-hidden="true" style="top: -200px; left: 0px;"></i>
+            <div id="player" style="pointer-events: none;">
+            </div>
+            <i class="fa fa-2x fa-play-circle" id="play" aria-hidden="true" style="top: -25px; left: -635px; display: none;"></i>
+            <i class="fa fa-2x fa-pause-circle" id="pause" aria-hidden="true" style="top: -25px; left: -635px;"></i>
+            <i class="fa fa-2x fa-volume-up" id="unmute" aria-hidden="true" style="top: -22px; left: -70px;"></i>
+            <i class="fa fa-2x fa-volume-off" id="mute" aria-hidden="true" style="top: -22px; left: -70px; display: none;"></i>
           </div>
 
           <div class="social-media">
@@ -221,5 +225,88 @@
       scroll_style();
      });
   </script>
+  <script id="youtubeAPI">
+
+      var videoArray = ['KXzu6rE3FJw', 'EE6Oz-sfsMc', 'oxu28Vt7ors', 'zlQspmqSVMg', 'UeNiKWPsaFU'],
+          x = 0,
+          tag = document.createElement('script'),
+          firstScriptTag = document.getElementsByTagName('script')[0],
+          player,
+          done = false;
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '390',
+          width: '640',
+          videoId: videoArray[x],
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          },
+          playerVars: {
+         'controls': 0,
+         'rel' : 0
+          }
+        });
+      }
+
+      $('#play').on('click', function () {
+        player.playVideo();
+        toggle('#pause', '#play');
+      });
+      $('#pause').on('click', function() {
+        player.pauseVideo();
+        toggle('#play','#pause');
+      });
+      $('#mute').on('click', function () {
+        player.mute();
+        toggle('#unmute', '#mute');
+      });
+      $('#unmute').on('click', function() {
+        player.unMute();
+        toggle('#mute','#unmute');
+      });
+      $('#next').on('click', function() {
+        if (x==4) { x = 0 }
+          else x++;
+        player.loadVideoById(videoArray[x])
+      });
+      $('#prev').on('click', function() {
+        if (x === 0) { x = 4 }
+          else x--;
+        player.loadVideoById(videoArray[x])
+      });
+
+      toggle = function(one, two) {
+        $(one).css('display', 'inline-block');
+        $(two).css('display', 'none');
+      }
+
+      function onPlayerReady(event) {
+        event.target.playVideo();
+        player.mute();
+      }
+
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+            // setInterval(fadeVideo, 500);
+            done = true;
+          }
+      }
+      // NICE EFFECT... MAYBE FOR ANOTHER TIME...
+
+      // function fadeVideo() {
+      //  currentVolume = player.getVolume();
+      //   if (currentVolume === 0) {
+      //     count++;
+      //     player.setVolume(100);
+      //   } else if (count === 0) {
+      //     player.setVolume(currentVolume - 5);
+      //   }
+      //}
+    </script>
  </body>
 </html>

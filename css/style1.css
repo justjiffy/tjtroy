@@ -33,6 +33,14 @@ h1.bold {
 	font-weight: 700;
 }
 
+i {
+  color: white;
+  position: relative;
+}
+i:hover {
+  color: #cccccc !important;
+  cursor: pointer;
+}
 .iframe-homepage {
 	padding-top: 20px;
 	width: 45%;
@@ -406,7 +414,7 @@ p.demos a.current-demo:hover {
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 	filter: alpha(opacity=100);
 	text-transform: uppercase;
-	text-shadow: 5px 5px 15px #757575;
+	text-shadow: 10px 10px 30px #b1b1b1;
 	line-height: 162px;
 	padding: 0;
   opacity: 0;
@@ -432,7 +440,6 @@ p.demos a.current-demo:hover {
 	position: relative;
 	border-radius: 50%;
 	max-width: 20%;
-  min-width: 199px;
 	box-shadow: 10px 10px 10px black;
   -webkit-animation: fromBack 1.5s ease-in-out forwards;
   -moz-animation: fromBack 1.5s ease-in-out forwards;
@@ -611,14 +618,30 @@ button#contact:hover {
   and (-webkit-min-device-pixel-ratio: 2) {
   	body {
 	    background: url(../images/logo_T.J._lgred.png) 100px 50px fixed no-repeat #ffffff;
-	    background-size: 125%;
-  	}
+	    background-size: 169%;
+      background-position-x: 0px;
+      background-position-y: 98px;  	}
 
   	.header h1 {
   		float: left;
   		font-size: 85%;
   	}
 
+    .sp-content img {
+      display: inline-block;
+      margin: 5px 10px;
+      z-index: 1000;
+      position: relative;
+      border-radius: 50%;
+      max-width: 20%;
+      box-shadow: 10px 10px 10px black;
+      -webkit-animation: fromBack 1.5s ease-in-out forwards;
+      -moz-animation: fromBack 1.5s ease-in-out forwards;
+      -ms-animation: fromBack 1.5s ease-in-out forwards;
+      animation: fromBack 1.5s ease-in-out forwards;
+      opacity: 0;
+      transform: scale(0);
+    }
   	.sp-content h1:first-child {
   		font-size: 80px;
   		text-align: center;
@@ -626,7 +649,7 @@ button#contact:hover {
   		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   		filter: alpha(opacity=100);
   		text-transform: uppercase;
-  		text-shadow: 5px 5px 15px #757575;
+  		text-shadow: 10px 10px 30px #b1b1b1;
   		line-height: 140px;
   		padding: 30px 0px 20px 0px;
   		font-family: 'Oswald', Arial, sans-serif;
