@@ -1,0 +1,94 @@
+a {
+  text-decoration: none;
+  color: rgba(0,0,0,0) !important;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+}
+a:hover {
+  color: white !important;
+}
+.circle {
+  display: inline-block !important;
+  background-color: powderblue;
+  color: #333;
+  border-radius: 50%;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 5px;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+  background-size: contain;
+  background-color: black;
+}
+.songwriter { background-image: url("http://localhost:8000/images/guitar.jpeg"); }
+.educator { background-image: url("http://localhost:8000/images/riq.jpeg"); }
+.performer { background-image: url("http://localhost:8000/images/partch.jpeg"); }
+.recording { background-image: url("http://localhost:8000/images/tabla.jpeg"); }
+.accompaniment { background-image: url("http://localhost:8000/images/dance.jpeg"); }
+.comics { background-image: url("http://localhost:8000/images/rdh.jpeg"); }
+.voiceover { background-image: url("http://localhost:8000/images/tj.jpeg"); }
+.liveevents { background-image: url("http://localhost:8000/images/illustrated.jpeg"); }
+
+@media only screen and (min-width: 350px) {
+  .circle {
+    width: 100px;
+    height: 100px;
+  }
+  .circle:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -2%;
+  }
+  .circle:hover {
+    color: #fff;
+  }
+  .circle:hover a {
+    color: white !important;
+    text-shadow: 1px 3px 6px #000000;
+  }
+  .circle h4 {
+    font-size: 0.9em;
+    line-height: 1em;
+  }
+  .circle > h4, .circle > .wrapcontent {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .circle > h4 > h4, .circle > .wrapcontent > h4 {
+    display: block;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .circle {
+    width: 130px;
+    height: 130px;
+  }
+  .circle h4 {
+    font-size: 1.2em;
+    line-height: 1em;
+  }
+@media only screen and (min-width: 812px) {
+  .circle {
+    width: 180px;
+    height: 180px;
+  }
+  .circle h4 {
+    font-size: 1.4em;
+    line-height: 1em;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .circle {
+    width: 250px;
+    height: 250px;
+  }
+  .circle h4 {
+    font-size: 1.6em;
+    line-height: 1em;
+  }
+}

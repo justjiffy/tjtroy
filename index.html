@@ -8,6 +8,7 @@
         <meta name="keywords" content="percussion, troy, musician, education, tabla, drum, partch, grammy, los angeles, comics" />
         <meta name="author" content="Codrops, massively destructed by JustJiffy" />
         <link rel="stylesheet" type="text/css" href="css/style1.css" />
+        <link rel="stylesheet" type="text/css" href="css/intro.css" />
         <link href='http://fonts.googleapis.com/css?family=Oswald:700,400,300' rel='stylesheet' type='text/css' />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -44,15 +45,17 @@
 
     <div class="sp-container">
 				<div class="sp-content" id="splash">
-					<img id="sp-c-1" src="images/illustrated.jpeg" />
-					<img id="sp-c-2" src="images/rdh.jpeg" />
-					<img id="sp-c-3" src="images/riq.jpeg" />
-					<img id="sp-c-4" src="images/partch.jpeg" /><br>
-						<span class="home"><h1 class="bold">T.J. Troy</h1></span><br>
-					<img id="sp-c-5" src="images/tabla.jpeg" />
-					<img id="sp-c-6" src="images/guitar.jpeg" />
-					<img id="sp-c-7" src="images/tj.jpeg" />
-					<img id="sp-c-8" src="images/dance.jpeg" />
+					        <div class="circle educator" id="sp-c-1"><h4><a href="#">GRAMMY WINNING RECORDING ARTIST</a></h4></div>
+                  <div class="circle songwriter" id="sp-c-2"><h4><a href="#">WRITER & COMPOSER</a></h4></div>
+                  <div class="circle liveevents" id="sp-c-3"><h4><a href="#">INTERNATIONAL TOURING ARTIST</a></h4></div>
+                  <div class="circle performer" id="sp-c-4"><h4><a href="#">EDUCATOR & LECTURER</a></h4></div>
+                    <br>
+                  <span class="home"><h1 class="bold">T.J. Troy</h1></span>
+                    <br>
+                  <div class="circle recording" id="sp-c-5"><h4><a href="#">TABLA & HAND PERCUSSION SPECIALIST</a></h4></div>
+                  <div class="circle accompaniment" id="sp-c-6"><h4><a href="#">DANCE & INSTRUMENTAL ACCOMPANIST</a></h4></div>
+                  <div class="circle comics" id="sp-c-7"><h4><a href="#">COMICS CREATOR</a></h4></div>
+                  <div class="circle voiceover" id="sp-c-8"><h4><a href="#">VOICEOVER TALENT</a></h4></div>
 					 <div class="clr"></div>
 				</div>
 
@@ -70,10 +73,10 @@
               <i class="fa fa-2x fa-chevron-left" id="prev" aria-hidden="true" style="top: -200px; left: 0px;"></i>
             <div id="player" style="pointer-events: none;">
             </div>
-            <i class="fa fa-2x fa-play-circle" id="play" aria-hidden="true" style="top: -25px; left: -635px; display: none;"></i>
-            <i class="fa fa-2x fa-pause-circle" id="pause" aria-hidden="true" style="top: -25px; left: -635px;"></i>
-            <i class="fa fa-2x fa-volume-up" id="unmute" aria-hidden="true" style="top: -22px; left: -70px;"></i>
-            <i class="fa fa-2x fa-volume-off" id="mute" aria-hidden="true" style="top: -22px; left: -70px; display: none;"></i>
+            <i class="fa fa-2x fa-play-circle" id="play" aria-hidden="true" style="top: -25px; left: -635px;"></i>
+            <i class="fa fa-2x fa-pause-circle" id="pause" aria-hidden="true" style="top: -25px; left: -635px; display: none;"></i>
+            <i class="fa fa-2x fa-volume-up" id="unmute" aria-hidden="true" style="top: -22px; right: 80px;"></i>
+            <i class="fa fa-2x fa-volume-off" id="mute" aria-hidden="true" style="top: -22px; right: 80px; display: none;"></i>
           </div>
 
           <div class="social-media">
@@ -272,12 +275,15 @@
       $('#next').on('click', function() {
         if (x==4) { x = 0 }
           else x++;
-        player.loadVideoById(videoArray[x])
+        player.loadVideoById(videoArray[x]);
+        toggle('#pause', '#play');
       });
       $('#prev').on('click', function() {
         if (x === 0) { x = 4 }
           else x--;
-        player.loadVideoById(videoArray[x])
+        player.loadVideoById(videoArray[x]);
+        toggle('#pause', '#play');
+
       });
 
       toggle = function(one, two) {
@@ -293,6 +299,7 @@
       function onPlayerStateChange(event) {
         if (event.data == YT.PlayerState.PLAYING && !done) {
             // setInterval(fadeVideo, 500);
+            toggle('#pause', '#play');
             done = true;
           }
       }

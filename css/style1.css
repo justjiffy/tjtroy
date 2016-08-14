@@ -415,7 +415,7 @@ p.demos a.current-demo:hover {
 	filter: alpha(opacity=100);
 	text-transform: uppercase;
 	text-shadow: 10px 10px 30px #b1b1b1;
-	line-height: 162px;
+	line-height: 127px;
 	padding: 0;
   opacity: 0;
 	font-family: 'Oswald', Arial, sans-serif;
@@ -433,14 +433,7 @@ p.demos a.current-demo:hover {
 	text-shadow: 1px 1px 1px rgba(255,255,255,0.9);
 }
 
-.sp-content img {
-	display: inline-block;
-	margin: 20px 10px;
-	z-index: 1000;
-	position: relative;
-	border-radius: 50%;
-	max-width: 20%;
-	box-shadow: 10px 10px 10px black;
+.sp-content .circle {
   -webkit-animation: fromBack 1.5s ease-in-out forwards;
   -moz-animation: fromBack 1.5s ease-in-out forwards;
   -ms-animation: fromBack 1.5s ease-in-out forwards;
