@@ -1,17 +1,13 @@
-a {
+h4 {
   text-decoration: none;
   color: rgba(0,0,0,0) !important;
   -webkit-transition: all 1s ease-out;
   -moz-transition: all 1s ease-out;
   -o-transition: all 1s ease-out;
-}
-a:hover {
-  color: white !important;
+  pointer-events: none;
 }
 .circle {
   display: inline-block !important;
-  background-color: powderblue;
-  color: #333;
   border-radius: 50%;
   box-sizing: border-box;
   text-align: center;
@@ -47,7 +43,7 @@ a:hover {
   .circle:hover {
     color: #fff;
   }
-  .circle:hover a {
+  .circle:hover h4 {
     color: white !important;
     text-shadow: 1px 3px 6px #000000;
   }
