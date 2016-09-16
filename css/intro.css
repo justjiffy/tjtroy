@@ -6,6 +6,11 @@ h4 {
   -o-transition: all 1s ease-out;
   pointer-events: none;
 }
+.circle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .circle {
   display: inline-block !important;
   border-radius: 50%;
