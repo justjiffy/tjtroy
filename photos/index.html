@@ -12,6 +12,7 @@
         <link href="https://fonts.googleapis.com/css?family=Passion+One|Poppins:700|Roboto:900|Varela" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script type="text/javascript" src="../js/instafeed.js"></script>
 
     <!--[if lt IE 10]>
         <link rel="stylesheet" type="text/css" href="css/style1IE.css" />
@@ -59,7 +60,7 @@
           var feed = new Instafeed({
               get: 'user',
               userId: '1569125810',
-              clientId: 'cd52513b4ad04996b712dd40ff523962',
+              accessToken: '1569125810.1677ed0.a70338f735f246cc8b254efd865506a1',
               resolution: 'standard_resolution',
               template: '<img src="{{image}}" alt="{{caption}}" class="photo-feed" />',
               after: function() {

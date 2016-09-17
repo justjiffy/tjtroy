@@ -583,8 +583,8 @@ button#contact:hover {
 }
 
 #video-container {
-  position: absolute;
-  top: 168px;
+  position: relative;
+  display: block;
   left: 0;
   right: 0;
   width: 640px;
