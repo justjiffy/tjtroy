@@ -33,10 +33,16 @@ h4 {
 .voiceover { background-image: url("http://tjtroy.com/images/tj.jpeg"); }
 .liveevents { background-image: url("http://tjtroy.com/images/illustrated.jpeg"); }
 
+.addSpace {
+  margin-top: 0;
+}
+
 @media only screen and (min-width: 350px) {
   .circle {
     width: 100px;
     height: 100px;
+    min-width: 100px !important;
+    min-height: 100px !important;
   }
   .circle:before {
     content: '';
@@ -53,7 +59,7 @@ h4 {
     text-shadow: 1px 3px 6px #000000;
   }
   .circle h4 {
-    font-size: 0.9em;
+    font-size: 0.75em;
     line-height: 1em;
   }
   .circle > h4, .circle > .wrapcontent {
@@ -63,16 +69,31 @@ h4 {
   .circle > h4 > h4, .circle > .wrapcontent > h4 {
     display: block;
   }
+  .addSpace {
+    margin-top: 17%;
+  }
 }
+@media only screen and (min-width: 568px) {
+    .addSpace {
+      margin-top: 0;
+    }
+  }
 @media only screen and (min-width: 768px) {
   .circle {
-    width: 130px;
-    height: 130px;
+    width: 180px;
+    height: 180px;
   }
   .circle h4 {
     font-size: 1.2em;
     line-height: 1em;
   }
+  .shrink {
+    font-size: 1em !important;
+  }
+  .addSpace {
+    margin-top: 7%;
+  }
+}
 @media only screen and (min-width: 812px) {
   .circle {
     width: 180px;
@@ -82,8 +103,14 @@ h4 {
     font-size: 1.4em;
     line-height: 1em;
   }
+  .shrink {
+    font-size: 1.3em !important;
+  }
+  .addSpace {
+    margin-top: 10%;
+  }
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1050px) {
   .circle {
     width: 250px;
     height: 250px;
@@ -91,5 +118,8 @@ h4 {
   .circle h4 {
     font-size: 1.6em;
     line-height: 1em;
+  }
+  .addSpace {
+    margin-top: 1%;
   }
 }

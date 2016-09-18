@@ -1,4 +1,13 @@
 @media only screen
+and (max-device-width : 768px)
+and (min-device-height : 600px )
+and (max-device-height : 1024px) {
+    .media-break {
+      display: block !important;
+      width: 200px;
+    }
+  }
+@media only screen
   and (max-width: 800px) {
     #dropdown-menu {
       display: none;
@@ -16,6 +25,7 @@
     #navbar h1 {
       font-size: 19px;
     }
+
 }
 @media only screen
   and (max-width: 650px) {
@@ -82,6 +92,12 @@
       animation: fromBack 1.5s ease-in-out forwards;
       opacity: 0;
       transform: scale(0);
+    }
+    .sp-content .circle {
+      min-width: 100px !important;
+      min-height: 100px !important;
+      width: 100px !important;
+      height: 100px !important;
     }
     .sp-content h1:first-child {
       font-size: 80px;
@@ -170,4 +186,16 @@
       background-color: rgba(255, 255, 255, 0.90);
       text-align: center;
     }
+    .glow-text {
+      font-size: 16px;
+      background: black;
+    }
+    .sp-holding {
+      padding: 0;
+    }
+    #video-container {
+    width: 100%;
+    margin-top: -125px;
+    z-index: -100;
+}
 }
