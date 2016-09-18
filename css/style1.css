@@ -343,6 +343,7 @@ p.demos a.current-demo:hover {
 	z-index: 100;
 	width: 100%;
 	display: block;
+	margin-top: -50px;
 }
 
 .sp-morecontent h3 {
@@ -366,6 +367,10 @@ p.demos a.current-demo:hover {
 
 .sp-morecontent a:visited {
 	color: white;
+}
+
+#loadSecond {
+	padding-top: 50px;
 }
 
 .bubble {
@@ -540,7 +545,7 @@ p.demos a.current-demo:hover {
 }
 
 button#contact {
-	width: 70%;
+	padding: 0 12px;
 	display: block;
 	margin: 0 auto;
 	background-color: black;
@@ -549,6 +554,7 @@ button#contact {
 
 button#contact:hover {
 	cursor: pointer;
+	background-color: #A21D24;
 }
 
 .modalImg {
