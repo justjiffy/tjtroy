@@ -117,6 +117,19 @@ i:hover {
 footer {
 	overflow: scroll;
 }
+footer ul {
+	padding-top: 7px;
+	font-size: smaller;
+}
+footer li:hover {
+	font-style: italic;
+}
+.underlined {
+	border-bottom: 1px solid white;
+	padding-bottom: 2px;
+	font-weight: bolder;
+	margin-bottom: 15px;
+}
 
 td {
 	vertical-align: top;
@@ -624,7 +637,7 @@ button#contact:hover {
 }
 #mute {
 	bottom: 0;
-	right: 8px;
+	right: 24px;
 	display: none;
 }
 .fa-line {

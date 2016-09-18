@@ -24,14 +24,14 @@ h4 {
   background-size: contain;
   background-color: black;
 }
-.songwriter { background-image: url("http://localhost:8000/images/guitar.jpeg"); }
-.educator { background-image: url("http://localhost:8000/images/riq.jpeg"); }
-.performer { background-image: url("http://localhost:8000/images/partch.jpeg"); }
-.recording { background-image: url("http://localhost:8000/images/tabla.jpeg"); }
-.accompaniment { background-image: url("http://localhost:8000/images/dance.jpeg"); }
-.comics { background-image: url("http://localhost:8000/images/rdh.jpeg"); }
-.voiceover { background-image: url("http://localhost:8000/images/tj.jpeg"); }
-.liveevents { background-image: url("http://localhost:8000/images/illustrated.jpeg"); }
+.songwriter { background-image: url("http://tjtroy.com/images/guitar.jpeg"); }
+.educator { background-image: url("http://tjtroy.com/images/riq.jpeg"); }
+.performer { background-image: url("http://tjtroy.com/images/partch.jpeg"); }
+.recording { background-image: url("http://tjtroy.com/images/tabla.jpeg"); }
+.accompaniment { background-image: url("http://tjtroy.com/images/dance.jpeg"); }
+.comics { background-image: url("http://tjtroy.com/images/rdh.jpeg"); }
+.voiceover { background-image: url("http://tjtroy.com/images/tj.jpeg"); }
+.liveevents { background-image: url("http://tjtroy.com/images/illustrated.jpeg"); }
 
 @media only screen and (min-width: 350px) {
   .circle {
