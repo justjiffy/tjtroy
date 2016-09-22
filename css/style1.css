@@ -1,5 +1,4 @@
 * { margin: 0; padding: 0; border: 0; }
-
 body {
 	background: url(../images/logo_T.J._lgred.png) 300px 50px fixed no-repeat #ffffff;
 	background-size: 90%;
@@ -7,32 +6,26 @@ body {
 	height: 100%;
 	overflow-x: hidden;
 }
-
 .other {
 	background: url(../images/Untitled-3.png) repeat #ffffff;
 	font-family: 'Varela', sans-serif;
 	height: 100%;
 }
-
 body::-webkit-scrollbar {
   display: none;
 }
-
 a {
 	color: #fff;
 	text-decoration: none;
 }
-
 h1 {
 	font-size: 18px;
 	display: inline;
 	font-weight: 200;
 }
-
 h1.bold {
 	font-weight: 700;
 }
-
 i {
   color: black;
   position: relative;
@@ -41,7 +34,6 @@ i:hover {
   color: #A21D24 !important;
   cursor: pointer;
 }
-
 #video-controls i {
   color: white;
 }
@@ -53,18 +45,15 @@ i:hover {
 	width: 45%;
 	height: 315px;
 }
-
 .iframe-rdh {
 	padding-top: 20px;
 	width: 100%;
 	height: 100vh;
 }
-
 .anchor {
 	margin-top: 100px;
 	display: block;
 }
-
 /* Header Style */
 .header{
 	font-family:'Poppins', sans-serif;
@@ -82,28 +71,23 @@ i:hover {
 	-webkit-box-shadow: 1px 0px 2px #000;
 	box-shadow: 1px 0px 2px #000;
 }
-
 .header a{
 	padding: 0px 10px;
 	letter-spacing: 1px;
 	display: block;
 	float: left;
 }
-
 .header a:hover{
 	color: #fff;
 }
-
 .header span.right{
 	float: right;
 	padding-right: 0px;
 }
-
 .header span.right a{
 	float: left;
 	display: inline;
 }
-
 .header h1 {
 	float: left;
 	font-size: 24px;
@@ -113,6 +97,40 @@ i:hover {
   position: absolute;
   right: 0;
   top: 10px;
+}
+.sidebar-media {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin-top: -300px;
+}
+.sidebar-events {
+	position: absolute;
+	left: 0;
+	bottom: 50%;
+	margin-top: 300px;
+}
+.sidebar img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+}
+#events-content, #media-content {
+	transition: all 1.5s ease-in-out;
+	position: absolute;
+	top:0;
+	background: black;
+	transform: translate3d(-5000px, 0px, 0px);
+}
+.on-media, .on-events {
+	display: none;
+}
+.sidebar-media:hover .on-media{
+	display: block;
+}
+.sidebar-events:hover .on-events{
+	display: block;
 }
 footer {
 	overflow: scroll;
@@ -130,17 +148,14 @@ footer li:hover {
 	font-weight: bolder;
 	margin-bottom: 15px;
 }
-
 td {
 	vertical-align: top;
 	padding-bottom: 25px;
 }
-
 li {
 	list-style-type: none;
 	font-weight: lighter;
 }
-
 ul#navlist {
 	display: inline;
 	font-family:'Varela', sans-serif;
@@ -150,47 +165,39 @@ ul#navlist {
 	text-transform: uppercase;
 	float: right;
 }
-
 ul#navlist, ul#navlist ul, ul#navlist li {
 	margin: 0px;
 	padding: 0px;
 	list-style-type: none;
 	float: right;
 }
-
 ul#navlist li {
 	float: right;
 	margin-right: 35px;
 }
-
 ul#navlist li a {
 	color: #000;
 	font-size: 18px;
 	font-weight: 100;
 	background-color: #000;
 }
-
 ul#navlist li a:hover {
 	color: #ffffff;
 	background-color: #000;
 }
-
 ul#navlist li a:active {
 	color: #a11923;
 	background-color: #000000;
 }
-
 ul#subnavlist {
 	display: none;
   width: 200px;
 }
-
 ul#subnavlist li {
 	float: left;
   margin-left: -248px;
   background-color: black;
 }
-
 ul#subnavlist li a {
   background-color: white;
   color: black;
@@ -198,7 +205,6 @@ ul#subnavlist li a {
 	padding: 0px;
 	margin: 0px;
 }
-
 ul#navlist li:hover ul#subnavlist {
 	display: block;
 	position: absolute;
@@ -206,16 +212,13 @@ ul#navlist li:hover ul#subnavlist {
 	padding-left: 5px;
 	padding-top: 30px;
 }
-
 ul#navlist li:hover ul#subnavlist li a {
 	display: block;
 	width: 500px;
 	border: none;
 	padding-left: 5px;
 }
-
 .clr { clear: both; }
-
 /* end header style */
 
 
@@ -228,15 +231,12 @@ ul#navlist li:hover ul#subnavlist li a {
 	vertical-align: top;
 	overflow-x: hidden;
 }
-
 .social-media {
   text-align: center;
 }
-
 .social-media * {
   padding: 10px 5px;
 }
-
 .social-media * :hover {
   color: #cccccc;
 }
@@ -245,7 +245,6 @@ p.demos {
 	padding: 5px;
 	text-align: center;
 }
-
 p.demos a {
   display: inline-block;
 	padding: 2px 4px;
@@ -256,19 +255,16 @@ p.demos a {
 	font-size: 14px;
 	box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
 }
-
 p.demos a:hover {
    color: #fff;
 	background: #555;
 }
-
 p.demos a.current-demo,
 p.demos a.current-demo:hover {
   font-weight: bold;
 	background: #333;
 	color: #fff;
 }
-
 .fa-bars {
   color: white !important;
   font-size: 26px !important;
@@ -283,13 +279,11 @@ p.demos a.current-demo:hover {
 	text-align: center;
 	padding-bottom: 25px
 }
-
 .glow-text {
 	font-size: 18px;
 	text-align: center;
 	text-shadow: 2px 2px 15px #ffffff;
 }
-
 .sp-container h1 {
 	font-size: 30px;
 	font-weight: 700;
@@ -297,18 +291,15 @@ p.demos a.current-demo:hover {
 	text-align: center;
 	text-shadow: 2px 2px 10px #ffffff;
 }
-
 .sp-container img {
 	border: none;
 	box-shadow: none;
 }
-
 .rounded {
 	border-radius: 50%;
 	float: left;
 	padding: 10px;
 }
-
 .sp-content {
 	position: relative;
 	display: inline-block;
@@ -319,7 +310,6 @@ p.demos a.current-demo:hover {
 	top: 10px;
 	bottom: 100px;
 }
-
 .sp-holding {
 	background-color: black;
 	position: relative;
@@ -331,9 +321,7 @@ p.demos a.current-demo:hover {
 	right: 0px;
 	top: 50px;
 }
-
 .sp-holding p { color: white; }
-
 .sp-morecontent {
 	background-image: url(../images/Untitled-3.png);
 	background-repeat: repeat;
@@ -345,7 +333,6 @@ p.demos a.current-demo:hover {
 	display: block;
 	margin-top: -50px;
 }
-
 .sp-morecontent h3 {
 	font-size: 24px;
 	color: #000;
@@ -355,7 +342,6 @@ p.demos a.current-demo:hover {
 	text-transform: uppercase;
 	text-align: left;
 }
-
 .sp-morecontent a {
 	font-size: 24px;
 	color: #fff;
@@ -364,16 +350,13 @@ p.demos a.current-demo:hover {
 	font-family: 'Varela', sans-serif;
 	text-transform: uppercase;
 }
-
 .sp-morecontent a:visited {
 	color: white;
 }
-
 #loadSecond {
 	padding-top: 50px;
 	background: black;
 }
-
 .bubble {
 	width:175px;
 	height: 125px;
@@ -383,25 +366,21 @@ p.demos a.current-demo:hover {
 	margin: 10px 0 auto;
 	display: inline-table;
 }
-
 .bubble:hover {
 	background-color: #999999;
 }
-
 .main-contact {
 	width: 25%;
 	font-size: 20px;
 	padding: 5px;
 	border: 2px solid gray;
 }
-
 .main-message {
 	width: 50%;
 	font-size: 18px;
 	padding: 5px;
 	border: 2px solid gray;
 }
-
 .box {
 	margin: 50px 5% 0 5%;
 	padding: 10px;
@@ -410,7 +389,6 @@ p.demos a.current-demo:hover {
 	background-color: rgba(255, 255, 255, 0.90);
 	text-align: center;
 }
-
 .box h1 {
 	font-size: 50px;
 	color: #000;
@@ -420,7 +398,6 @@ p.demos a.current-demo:hover {
 	font-family: 'Poppins', sans-serif;
 	text-transform: uppercase;
 }
-
 .box p {
 	color: black;
 	font-family:'Yantramanav', sans-serif;
@@ -434,19 +411,16 @@ p.demos a.current-demo:hover {
 	margin-bottom: 40px;
 	text-shadow: 1px 1px 1px #ffffff;
 }
-
 .whtlink {
 	color: white;
 	float: left;
 }
-
 .whtlink a:hover {
 	color: white;
 }
 .whtlink a:visited {
 	color: white;
 }
-
 .sp-content h1:first-child {
 	font-size: 100px;
 	text-align: center;
@@ -455,8 +429,8 @@ p.demos a.current-demo:hover {
 	filter: alpha(opacity=100);
 	text-transform: uppercase;
 	text-shadow: 3px 0px 25px #ffffff;
-	line-height: 127px;
 	padding: 0;
+	margin: 0;
   opacity: 0;
 	font-family: 'Poppins', sans-serif;
 	-webkit-animation: fromBack 1.8s ease-in forwards;
@@ -464,7 +438,6 @@ p.demos a.current-demo:hover {
 	-ms-animation: fromBack 1.8s ease-in forwards;
 	animation: fromBack 1.8s ease-in forwards;
 }
-
 .sp-content h2 {
 	font-size: 36px;
 	text-align: center;
@@ -472,7 +445,6 @@ p.demos a.current-demo:hover {
 	font-family: 'Varela', serif;
 	text-shadow: 1px 1px 1px rgba(255,255,255,0.9);
 }
-
 .sp-content .circle {
   -webkit-animation: fromBack 1.5s ease-in-out forwards;
   -moz-animation: fromBack 1.5s ease-in-out forwards;
@@ -541,12 +513,10 @@ p.demos a.current-demo:hover {
 .box-shadow {
 	box-shadow: 10px 10px 10px black;
 }
-
 .no-box-shadow {
 	box-shadow: 0px 0px 0px white;
 	border: none;
 }
-
 button#contact {
 	padding: 0 12px;
 	display: block;
@@ -554,12 +524,10 @@ button#contact {
 	background-color: black;
 	border-radius: 10px
 }
-
 button#contact:hover {
 	cursor: pointer;
 	background-color: #A21D24;
 }
-
 .modalImg {
 	position: fixed;
 	width: 100%;
@@ -574,21 +542,17 @@ button#contact:hover {
 	text-align: center;
 	padding-top: 25px;
 }
-
 .photo-feed {
 	width: 25%;
 	border-radius: 50%;
 	padding: 5px;
 }
-
 .photo-feed:hover {
 	cursor: zoom-in;
 }
-
 .zoom-out {
 	cursor: zoom-out;
 }
-
 .close {
 	height: 25px;
 	width: 25px;
@@ -599,11 +563,9 @@ button#contact:hover {
 	top:10%;
 	right: 25%;
 }
-
 #bio {
   height:585px;
 }
-
 #video-container {
   position: relative;
   display: block;
@@ -649,6 +611,11 @@ button#contact:hover {
 	right: 24px;
 	display: none;
 }
+#events-back {
+	top: 52px;
+	left: 55px;
+	position: absolute;
+}
 .fa-line {
   text-shadow:
    -1px -1px 25px #fff,
@@ -674,7 +641,6 @@ button#contact:hover {
 		opacity: 1;
 	}
 }
-
 @-moz-keyframes fromBack{
 	0%{
 		-moz-transform: scale(0);
@@ -685,7 +651,6 @@ button#contact:hover {
 		opacity: 1;
 	}
 }
-
 @keyframes fromBack{
 	0%{
 		transform: scale(0);

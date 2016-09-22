@@ -12,11 +12,9 @@ and (max-device-height : 1024px) {
     #dropdown-menu {
       display: none;
     }
-
     #samples-howto {
       display: none;
     }
-
     td {
       width: 100%;
       display: block;
@@ -25,7 +23,6 @@ and (max-device-height : 1024px) {
     #navbar h1 {
       font-size: 19px;
     }
-
 }
 @media only screen
   and (max-width: 650px) {
@@ -45,11 +42,9 @@ and (max-device-height : 1024px) {
     #dropdown-menu {
       display: none;
     }
-
     #samples-howto {
       display: none;
     }
-
     td {
       width: 100%;
       display: block;
@@ -71,13 +66,12 @@ and (max-device-height : 1024px) {
       background: url(../images/logo_T.J._lgred.png) 100px 50px fixed no-repeat #ffffff;
       background-size: 169%;
       background-position-x: 0px;
-      background-position-y: 98px;    }
-
+      background-position-y: 98px;
+    }
     .header h1 {
       float: left;
       font-size: 85%;
     }
-
     .sp-content img {
       display: inline-block;
       margin: 5px 10px;
@@ -115,7 +109,6 @@ and (max-device-height : 1024px) {
       -ms-animation: fromBack 1.8s ease-in forwards;
       animation: fromBack 1.8s ease-in forwards;
     }
-
     .sp-content img {
       display: inline-block;
       z-index: 1000;
@@ -155,29 +148,24 @@ and (max-device-height : 1024px) {
       padding: 5px;
       border: 2px solid gray;
     }
-
     .main-message {
       width: 80%;
       font-size: 18px;
       padding: 5px;
       border: 2px solid gray;
     }
-
     .photo-feed {
       width: 40%;
     }
-
     .photo-feed:hover {
       cursor: pointer;
     }
-
     .popup {
       width: 300px;
       position: relative;
       margin: 10% 0;
       background: #fff;
     }
-
     .box {
       margin: 50px 2% 0 2%;
       padding: 10px;
@@ -197,5 +185,5 @@ and (max-device-height : 1024px) {
     width: 100%;
     margin-top: -125px;
     z-index: -100;
-}
+    }
 }

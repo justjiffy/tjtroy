@@ -48,28 +48,47 @@
 
     <div class="sp-container">
 				<div class="sp-content" id="splash">
-	        <div class="circle-container addSpace">
-            <span class="media-break">
-              <div class="circle educator" id="sp-c-1"><h4>GRAMMY WINNING RECORDING ARTIST</h4></div>
-              <div class="circle songwriter" id="sp-c-2"><h4>WRITER & COMPOSER</h4></div>
-            </span>
-            <span class="media-break">
-              <div class="circle liveevents" id="sp-c-3"><h4 class="shrink">INT'L TOURING ARTIST</h4></div>
-              <div class="circle performer" id="sp-c-4"><h4>EDUCATOR & LECTURER</h4></div>
-            </span>
+          <div id="introContainer">
+  	        <div class="circle-container" id="part1">
+              <span class="media-break">
+                <div class="circle educator" id="sp-c-1"><h4>GRAMMY WINNING RECORDING ARTIST</h4></div>
+                <div class="circle songwriter" id="sp-c-2"><h4>WRITER & COMPOSER</h4></div>
+              </span>
+              <span class="media-break">
+                <div class="circle liveevents" id="sp-c-3"><h4 class="shrink">INT'L TOURING ARTIST</h4></div>
+                <div class="circle performer" id="sp-c-4"><h4>EDUCATOR & LECTURER</h4></div>
+              </span>
+             </div>
+              <br>
+            <span class="home"><h1 class="bold" id="part2" style="display: block; min-height: 165px;">T.J. Troy</h1></span>
+            <div class="circle-container" id="part3">
+              <span class="media-break">
+                <div class="circle recording" id="sp-c-5"><h4 class="shrink">TABLA & HAND PERCUSSION SPECIALIST</h4></div>
+                <div class="circle accompaniment" id="sp-c-6"><h4 class="shrink">DANCE ACCOMPANIST</h4></div>
+              </span>
+              <span class="media-break">
+                <div class="circle comics" id="sp-c-7"><h4>COMICS CREATOR</h4></div>
+                <div class="circle voiceover" id="sp-c-8"><h4>VOICEOVER TALENT</h4></div>
+  					  </span>
+             </div>
            </div>
-            <br>
-          <span class="home"><h1 class="bold">T.J. Troy</h1></span>
-            <br>
-          <div class="circle-container wpad">
-            <span class="media-break">
-              <div class="circle recording" id="sp-c-5"><h4 class="shrink">TABLA & HAND PERCUSSION SPECIALIST</h4></div>
-              <div class="circle accompaniment" id="sp-c-6"><h4 class="shrink">DANCE ACCOMPANIST</h4></div>
-            </span>
-            <span class="media-break">
-              <div class="circle comics" id="sp-c-7"><h4>COMICS CREATOR</h4></div>
-              <div class="circle voiceover" id="sp-c-8"><h4>VOICEOVER TALENT</h4></div>
-					  </span>
+           <div class="sidebar" id="splash-sidebar">
+            <div class="sidebar-media" id="sidebar-media">
+              <img src="images/tab_media.png">
+              <img src="images/tab_media_on.png" class="on-media">
+            </div>
+            <div class="sidebar-events" id="sidebar-events">
+              <img src="images/tab_events.png">
+              <img src="images/tab_events_on.png" class="on-events">
+            </div>
+           </div>
+           <div class="sidebar-events-content" id="events-content">
+            <div class="event-container" id="event-container">
+              <i class="fa fa-2x fa-chevron-left fa-line back" id="events-back" aria-hidden="true"></i>
+            </div>
+           </div>
+           <div class="sidebar-media-content" id="media-content">
+            <h1>MEDIA</h1>
            </div>
            <div class="clr"></div>
 				</div>
@@ -165,159 +184,6 @@
 
     <p style="float: right; text-align: right; color: white; text-transform: uppercase; margin: 100px 67px 0 0;">Site Design and Development by <a href="http://www.justjiffy.com" target="_blank"><strong>www.JUSTJIFFY.com</strong></a></p>
   </footer>
-  <script>
-    var photoPosts = [];
-    var textPosts = [];
-
-    myJsonpCallback = function(data) {
-      var posts = data.response.posts;
-      var numPosts = data.response.blog.posts;
-      console.log(numPosts);
-      $.each(posts, function(key, value) {
-        if (value.type == "photo") {
-          photoPosts.push(value)
-        } else if (value.type == "text") {
-          textPosts.push(value);
-        }
-      });
-    console.log("PHOTO POSTS: ");
-    checkLog(photoPosts);
-    console.log("TEXT POSTS: ");
-    checkLog(textPosts);
-    }
-
-    checkLog = function(array) {
-      $.each(array, function(key, value) {
-        if (value.photos) {
-          console.log(value.photos[0].alt_sizes[3].url + " - " + value.caption);
-        } else console.log(value.title + " - " + value.body);
-      })
-    }
-
-    $.ajax({
-        type: "GET",
-        url : "https://api.tumblr.com/v2/blog/tjtroy.tumblr.com/posts",
-        dataType: "jsonp",
-        data: {
-            api_key : "JMCc448RKpEearLdRVbLGb9rd0bmXfIA9abEdJghuO2ZALHtjl",
-            jsonp : "myJsonpCallback"
-        }
-    });
-  </script>
-  <script type="text/javascript" id="scroll-header">
-    function scroll_style() {
-       var window_top = $(window).scrollTop();
-       var div_top = 1;
-
-       if (window_top > div_top){
-          console.log('show navigation');
-          $('#splash').slideUp("slow");
-          $('#loadSecond').fadeIn("slow");
-          $('#navbar').slideDown("slow");
-       } else {
-        $('#loadSecond').slideDown();
-        $('#navbar').slideUp();
-        $('#splash').fadeIn();
-        console.log('no show navigation') }
-    };
-
-    $(function() {
-      $(window).scroll(scroll_style);
-      scroll_style();
-
-      //set video area height to window height
-      var height = $(window).height();
-      $('#bio').height(height);
-      $('#splash').height(height);
-
-     });
-  </script>
-  <script id="youtubeAPI">
-
-      var videoArray = ['KXzu6rE3FJw', 'EE6Oz-sfsMc', 'oxu28Vt7ors', 'zlQspmqSVMg', 'UeNiKWPsaFU'],
-          x = 0,
-          tag = document.createElement('script'),
-          firstScriptTag = document.getElementsByTagName('script')[0],
-          player,
-          done = false;
-
-      tag.src = "https://www.youtube.com/iframe_api";
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-      function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-          height: '390',
-          width: '100%',
-          videoId: videoArray[x],
-          events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-          },
-          playerVars: {
-         'controls': 0,
-         'rel' : 0
-          }
-        });
-      }
-
-      $('#play').on('click', function () {
-        player.playVideo();
-        toggle('#pause', '#play');
-      });
-      $('#pause').on('click', function() {
-        player.pauseVideo();
-        toggle('#play','#pause');
-      });
-      $('#mute').on('click', function () {
-        player.mute();
-        toggle('#unmute', '#mute');
-      });
-      $('#unmute').on('click', function() {
-        player.unMute();
-        toggle('#mute','#unmute');
-      });
-      $('#next').on('click', function() {
-        if (x==4) { x = 0 }
-          else x++;
-        player.loadVideoById(videoArray[x]);
-        toggle('#pause', '#play');
-      });
-      $('#prev').on('click', function() {
-        if (x === 0) { x = 4 }
-          else x--;
-        player.loadVideoById(videoArray[x]);
-        toggle('#pause', '#play');
-
-      });
-
-      toggle = function(one, two) {
-        $(one).css('display', 'block');
-        $(two).css('display', 'none');
-      }
-
-      function onPlayerReady(event) {
-        event.target.playVideo();
-        player.mute();
-      }
-
-      function onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.PLAYING && !done) {
-            // setInterval(fadeVideo, 500);
-            toggle('#pause', '#play');
-            done = true;
-          }
-      }
-      // NICE EFFECT... MAYBE FOR ANOTHER TIME...
-
-      // function fadeVideo() {
-      //  currentVolume = player.getVolume();
-      //   if (currentVolume === 0) {
-      //     count++;
-      //     player.setVolume(100);
-      //   } else if (count === 0) {
-      //     player.setVolume(currentVolume - 5);
-      //   }
-      //}
-    </script>
+<script type="text/javascript" src="js/splash.js"></script>
  </body>
 </html>

@@ -32,11 +32,35 @@ h4 {
 .comics { background-image: url("http://tjtroy.com/images/rdh.jpeg"); }
 .voiceover { background-image: url("http://tjtroy.com/images/tj.jpeg"); }
 .liveevents { background-image: url("http://tjtroy.com/images/illustrated.jpeg"); }
-
 .addSpace {
   margin-top: 0;
 }
-
+.event-container {
+  background: black;
+  width: 70%;
+  display: block;
+  margin: 50px auto;
+}
+.container-header {
+  background: #646464;
+  color: white;
+  font-size: 20px;
+  padding: 9px 0 0 10px;
+  text-align: left;
+}
+.event-post {
+    margin: 50px 0 0 -65px;
+    background: white;
+}
+.container-body p {
+  padding: 5px 10px;
+}
+#introContainer {
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
 @media only screen and (min-width: 350px) {
   .circle {
     width: 100px;
