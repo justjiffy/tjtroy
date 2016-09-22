@@ -68,31 +68,35 @@ $(function() {
   //set video area height to window height
   var height = $(window).height();
   var width = $(window).width();
+
   var introContainer = $('#part1').height() + $('#part2').height() + $('#part3').height();
   var marginTop = (height - introContainer) / 2;
 
-  console.log('width: '+ width + " height: " + height + " introContainer: " + introContainer);
-  console.log('part1: '+ $('#part1').height() + " part2: " + $('#part2').height() + " part3 " + $('#part3').height());
+  var sidebarHeight = $('#splash-sidebar').height();
+  var marginSidebar = (height - sidebarHeight) / 2;
+
+  // console.log('width: '+ width + " height: " + height + " introContainer: " + introContainer);
+  // console.log('part1: '+ $('#part1').height() + " part2: " + $('#part2').height() + " part3 " + $('#part3').height());
 
   $('#introContainer').css("marginTop", marginTop+"px" );
   $('#bio').height(height);
   $('#splash').height(height);
 
+  $('#splash-sidebar').css("marginTop", marginSidebar+"px" );
+
   $('#events-content').width(width);
   $('#events-content').height(height);
   $('#events-content').css("transform", "translate3d(-"+width+"px, 0px, 0px)");
 
-$('#media-content').width(width);
+  $('#media-content').width(width);
   $('#media-content').height(height);
   $('#media-content').css("transform", "translate3d(-"+width+"px, 0px, 0px)");
 
   $('#sidebar-events').click(function() {
     $('#events-content').css({
       'transform' : 'translate3d(65px, 0px, 0px)',
-      'display' : 'block'
     });
     $('#media-content').css({
-      'display' : 'none',
       'transform' : "translate3d(-"+width+"px, 0px, 0px)"
     });
   });
@@ -100,16 +104,19 @@ $('#media-content').width(width);
   $('#sidebar-media').click(function() {
     $('#media-content').css({
       'transform' : 'translate3d(65px, 0px, 0px)',
-      'display' : 'block'
     });
     $('#events-content').css({
-      'display' : 'none',
       'transform' : "translate3d(-"+width+"px, 0px, 0px)"
     });
   });
 
   $('#events-back').click(function() {
     $('#events-content').css({
+      'transform' : "translate3d(-"+width+"px, 0px, 0px)",
+    });
+  });
+  $('#media-back').click(function() {
+    $('#media-content').css({
       'transform' : "translate3d(-"+width+"px, 0px, 0px)",
     });
   });

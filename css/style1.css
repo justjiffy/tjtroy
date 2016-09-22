@@ -99,20 +99,18 @@ i:hover {
   top: 10px;
 }
 .sidebar-media {
-	position: absolute;
-	left: 0;
-	top: 50%;
-	margin-top: -300px;
+	display: block;
+	height: 288px;
+	width: 65px;
 }
 .sidebar-events {
-	position: absolute;
-	left: 0;
-	bottom: 50%;
-	margin-top: 300px;
+	display: block;
+	height: 319px;
+	width: 65px;
 }
 .sidebar img {
 	position: absolute;
-	top: 0;
+	top: inherit;
 	left: 0;
 	cursor: pointer;
 }
@@ -611,9 +609,9 @@ button#contact:hover {
 	right: 24px;
 	display: none;
 }
-#events-back {
-	top: 52px;
-	left: 55px;
+#events-back, #media-back {
+	top: 15px;
+	left: 15px;
 	position: absolute;
 }
 .fa-line {
